@@ -3,6 +3,8 @@
 
 Transliterate a UTF-8 value to ASCII.
 
+We use a simple phrase in greek and the ascii() method transforms every char in ascii.
+
 Example usage
 ---
 ```php

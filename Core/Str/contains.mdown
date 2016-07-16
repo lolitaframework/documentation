@@ -3,6 +3,8 @@
 
 Determine if a given string contains a given substring.
 
+As i mentioned before the second parameter can be a string or an array of strings. In case it is a string the method returns true or false accordingly by searching in a case-sensitive manner. In case we pass an array of strings then the method returns true as long as it has at least one match no matter how many strings the $needles array contains. So in our third example the method returned true because there was 1 match while for in fourth example returned false because of 0 matches.
+
 Example usage
 ---
 ```php

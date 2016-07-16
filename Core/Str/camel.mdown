@@ -3,6 +3,8 @@
 
 The Str::case function converts the given string to camelCase.
 
+We use a simple string and the camel() method creates the camel case version of it.
+
 Example usage
 ---
 ```php
