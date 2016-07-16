@@ -1,0 +1,43 @@
+\MyProject\LolitaFramework\Core\Str::is
+===
+
+The Str::is function determines if a given string matches a given pattern. Asterisks may be used to indicate wildcards.
+
+Use the asterisk to indicate that more chars are before or after the $pattern we are searching for so you can have a match.
+
+Example usage
+---
+```php
+
+$value = str_is('foo*', 'foobar');
+
+// true
+
+```
+
+```php
+
+$value = str_is('baz*', 'foobar');
+
+// false
+
+```
+
+```php
+
+$value = str_is('*is*', 'LolitaFramework is really awesome');
+
+// true
+
+```
+
+Parameters
+---
+
+_string_  __$pattern__
+
+_string_  __$value__
+
+Return Value
+---
+__bool__
