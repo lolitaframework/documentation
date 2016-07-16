@@ -1,0 +1,29 @@
+\MyProject\LolitaFramework\Core\Arr::where
+===
+
+The Arr::where function filters the array using the given Closure.
+
+Example usage
+---
+```php
+
+$array = [100, '200', 300, '400', 500];
+
+$array = array_where($array, function ($key, $value) {
+    return is_string($value);
+});
+
+// [1 => 200, 3 => 400]
+
+```
+
+Parameters
+---
+
+_array_  __$array__
+
+_callable_  __$callback__
+
+Return Value
+---
+__array__
