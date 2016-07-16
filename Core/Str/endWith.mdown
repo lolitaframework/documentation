@@ -1,0 +1,43 @@
+\MyProject\LolitaFramework\Core\Str::endWith
+===
+
+The Str::endWith function determines if the given string ends with the given value.
+
+As i mentioned before the second parameter can be a string or an array of strings. In case it is a string the method returns true or false accordingly by checking in a case-sensitive manner. In case we pass an array of strings then the method returns true as long as one of the strings is the correct one.
+
+Example usage
+---
+```php
+
+$result = Str::endWith('This is my name', 'name');
+
+// true
+
+```
+
+```php
+
+$result = Str::endsWith('Laravel is really awesome', 'Awesome');
+
+// false
+
+```
+
+```php
+
+$result = Str::endsWith('Laravel is really awesome', ['Awesome', 'awesome']);
+
+// true
+
+```
+
+Parameters
+---
+
+_string_  __$haystack__
+
+_string|array_  __$needles__
+
+Return Value
+---
+__bool__

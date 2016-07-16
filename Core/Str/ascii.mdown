@@ -1,0 +1,21 @@
+\MyProject\LolitaFramework\Core\Str::ascii
+===
+
+Transliterate a UTF-8 value to ASCII.
+
+Example usage
+---
+```php
+
+$str = Str::ascii('Με λένε Μάριο!');
+
+// Me lene Mario!
+```
+
+Parameters
+---
+_string_  __$value__
+
+Return Value
+---
+__string__

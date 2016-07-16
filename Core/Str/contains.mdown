@@ -1,0 +1,53 @@
+\MyProject\LolitaFramework\Core\Str::contains
+===
+
+Determine if a given string contains a given substring.
+
+Example usage
+---
+```php
+
+$str = 'Laravel is really awesome';
+
+$result = Str::contains($str, 'Laravel');
+
+// true
+```
+```php
+
+$str = 'Laravel is really awesome';
+
+$result = Str::contains($str, ['Laravel', 'is']);
+
+// true
+
+```
+```php
+
+$str = 'Laravel is really awesome';
+
+$result = Str::contains($str, ['laravel', 'is']);
+
+// true
+
+```
+```php
+
+$str = 'Laravel is really awesome';
+
+$result = Str::contains($str, ['laravel', 'his']);
+
+// false
+
+```
+
+Parameters
+---
+
+_string_  __$haystack__ String.
+
+_string|array_  __$needles__ The second parameter named $needles can be a string or an array of strings.
+
+Return Value
+---
+__bool__

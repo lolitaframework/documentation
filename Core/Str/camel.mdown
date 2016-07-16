@@ -1,0 +1,21 @@
+\MyProject\LolitaFramework\Core\Str::camel
+===
+
+The Str::case function converts the given string to camelCase.
+
+Example usage
+---
+```php
+
+$camel = Str::case('foo_bar');
+
+// fooBar
+```
+
+Parameters
+---
+_string_  __$value__
+
+Return Value
+---
+__string__
