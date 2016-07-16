@@ -1,0 +1,23 @@
+\MyProject\LolitaFramework\Core\Arr::removeEmpty
+===
+
+Remove empty elements from the array.
+
+Example usage
+---
+```php
+
+$array = Arr::removeEmpty([100, '', 300, '', 500]);
+
+// [100, 300, 500]
+
+```
+
+Parameters
+---
+
+_array_  __$arr__
+
+Return Value
+---
+__array__
