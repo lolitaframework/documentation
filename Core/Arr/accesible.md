@@ -1,9 +1,10 @@
-Arr ( \MyProject\LolitaFramework\Core )
+\MyProject\LolitaFramework\Core\Arr::accesible
 ===
 `Arr::accesible(mixed $value):bool`
 
 Determine whether the given value is array accessible.
-
+Example usage
+---
 ```php
 $array = Arr::accessible(array('Some array value'));
 // It's array. Function return true.
@@ -11,8 +12,10 @@ $array = Arr::accessible(array('Some array value'));
 $string = Arr::accessible('Some string value');
 // It's string. Function return false.
 ```
+Parameters
+---
+**$value** to check.
 
-
-`Arr::add($array, $key, $value)`
-
-The Arr::add function adds a given key / value pair to the array if the given key doesn't already exist in the array:
+Return Value
+---
+**Boolean** true if value array accesible false if not.
