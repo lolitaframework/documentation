@@ -1,0 +1,21 @@
+\MyProject\LolitaFramework\Core\Str::compileVariables
+===
+
+Call model from string like this {{ Model::Method }}
+
+Example usage
+---
+```php
+
+TODO
+
+```
+
+Parameters
+---
+
+_string_ __$str__ string to compile.
+
+Return Value
+---
+__mixed__ compiled string.
