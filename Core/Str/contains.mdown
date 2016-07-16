@@ -9,35 +9,35 @@ Example usage
 ---
 ```php
 
-$str = 'Laravel is really awesome';
+$str = 'Lolita Framework is really awesome';
 
-$result = Str::contains($str, 'Laravel');
+$result = Str::contains($str, 'Lolita Framework');
 
 // true
 ```
 ```php
 
-$str = 'Laravel is really awesome';
+$str = 'Lolita Framework is really awesome';
 
-$result = Str::contains($str, ['Laravel', 'is']);
-
-// true
-
-```
-```php
-
-$str = 'Laravel is really awesome';
-
-$result = Str::contains($str, ['laravel', 'is']);
+$result = Str::contains($str, ['Lolita Framework', 'is']);
 
 // true
 
 ```
 ```php
 
-$str = 'Laravel is really awesome';
+$str = 'Lolita Framework is really awesome';
 
-$result = Str::contains($str, ['laravel', 'his']);
+$result = Str::contains($str, ['lolita', 'is']);
+
+// true
+
+```
+```php
+
+$str = 'Lolita Framework is really awesome';
+
+$result = Str::contains($str, ['lolita', 'his']);
 
 // false
 

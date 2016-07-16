@@ -17,9 +17,9 @@ $string = Str::finish('this/string', '/');
 
 ```php
 
-$string = Str::finish('Laravel is really awesome', ' and superb');
+$string = Str::finish('Lolita Framework is really awesome', ' and superb');
 
-// Laravel is really awesome and superb
+// Lolita Framework is really awesome and superb
 
 ```
 

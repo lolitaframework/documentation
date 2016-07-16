@@ -17,7 +17,7 @@ $result = Str::endWith('This is my name', 'name');
 
 ```php
 
-$result = Str::endsWith('Laravel is really awesome', 'Awesome');
+$result = Str::endsWith('Lolita Framework is really awesome', 'Awesome');
 
 // false
 
@@ -25,7 +25,7 @@ $result = Str::endsWith('Laravel is really awesome', 'Awesome');
 
 ```php
 
-$result = Str::endsWith('Laravel is really awesome', ['Awesome', 'awesome']);
+$result = Str::endsWith('Lolita Framework is really awesome', ['Awesome', 'awesome']);
 
 // true
 
