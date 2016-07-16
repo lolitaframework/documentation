@@ -1,0 +1,43 @@
+\MyProject\LolitaFramework\Core\Str::limit
+===
+
+The Str::limit function limits the number of characters in a string. The function accepts a string as its first argument and the maximum number of resulting characters as its second argument.
+
+Example usage
+---
+```php
+
+$value = Str::limit('The PHP framework for web.', 7);
+
+// The PHP...
+
+```
+
+```php
+
+$value = Str::limit('Lolita Framework is really awesome');
+
+// Laravel is really awesome
+
+```
+
+```php
+
+$value = Str::limit('Lolita Framework is really awesome', 7, '!!!');
+
+// Laravel!!!
+
+```
+
+Parameters
+---
+
+_string_  __$value__
+
+_int_     __$limit__
+
+_string_  __$end__
+
+Return Value
+---
+__string__
