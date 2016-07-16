@@ -1,0 +1,27 @@
+\MyProject\LolitaFramework\Core\Arr::last
+===
+
+The Arr::last function returns the last element in the given array.
+
+Example usage
+---
+```php
+$array = [100, 200, 300];
+
+$last = last($array);
+
+// 300
+
+```
+
+Parameters
+---
+_array_  __$array__
+
+_callable|null_  __$callback__
+
+_mixed_  __$default__
+
+Return Value
+---
+__mixed__
