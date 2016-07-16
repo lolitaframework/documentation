@@ -19,3 +19,7 @@ Any help is appreciated. The project is open-source and we encourage you to part
 - Following the project on GitHub
 - Following us on Twitter
 - Sharing the project around your community
+
+Next
+----
+Read the [contributing](https://github.com/lolitaframework/documentation/blob/master/contributing.md)
