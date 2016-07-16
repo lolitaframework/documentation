@@ -1,0 +1,23 @@
+\MyProject\LolitaFramework\Core\Str::singular
+===
+
+The Str::singular function converts a string to its singular form. This function currently only supports the English language.
+
+Example usage
+---
+```php
+
+$singular = Str::singular('cars');
+
+// car
+
+```
+
+Parameters
+---
+
+_string_  __$value__
+
+Return Value
+---
+__string__
