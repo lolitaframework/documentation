@@ -1,0 +1,29 @@
+\MyProject\LolitaFramework\Core\Arr::prepend
+===
+
+The Arr::prepend function will push an item onto the beginning of an array.
+
+Example usage
+---
+```php
+
+$array = ['one', 'two', 'three', 'four'];
+
+$array = array_prepend($array, 'zero');
+
+// $array: ['zero', 'one', 'two', 'three', 'four']
+
+```
+
+Parameters
+---
+
+_array_  __$array__
+
+_mixed_  __$value__
+
+_mixed_  __$key__
+
+Return Value
+---
+__array__
