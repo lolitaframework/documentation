@@ -1,6 +1,8 @@
 Lolita framework documentation
 ===
-Follow us on Twitter for updates: [@LolitaFramework](https://twitter.com/lolitaframework)
+Follow us on Twitter for updates: [@lolitaframework](https://twitter.com/lolitaframework)
+
+Folow us on Instagram: [@lolitaframework](https://www.instagram.com/lolitaframework/)
 
 ### Found an error in the documentation ?
 
