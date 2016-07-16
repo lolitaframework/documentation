@@ -3,6 +3,7 @@
 `Arr::accesible(mixed $value):bool`
 
 Determine whether the given value is array accessible.
+
 Example usage
 ---
 ```php

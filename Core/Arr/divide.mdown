@@ -1,0 +1,23 @@
+\MyProject\LolitaFramework\Core\Arr::divide
+===
+`Arr::divide(array $array):array`
+
+The Arr::divide function returns two arrays, one containing the keys, and the other containing the values of the original array:
+
+Example usage
+---
+```php
+list($keys, $values) = array_divide(['name' => 'Desk']);
+
+// $keys: ['name']
+
+// $values: ['Desk']
+```
+
+Parameters
+---
+[array] **$array**
+
+Return Value
+---
+**Array**
