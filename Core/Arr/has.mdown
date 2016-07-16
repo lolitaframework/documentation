@@ -1,0 +1,27 @@
+\MyProject\LolitaFramework\Core\Arr::has
+===
+
+The Arr::has function checks that a given item exists in an array using "dot" notation.
+
+Example usage
+---
+```php
+
+$array = ['products' => ['desk' => ['price' => 100]]];
+
+$hasDesk = array_has($array, 'products.desk');
+
+// true
+
+```
+
+Parameters
+---
+
+_\ArrayAccess|array_  __$array__
+
+_string_  __$key__
+
+Return Value
+---
+__bool__

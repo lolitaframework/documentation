@@ -1,0 +1,36 @@
+\MyProject\LolitaFramework\Core\Arr::get
+===
+
+The Arr::get function retrieves a value from a deeply nested array using "dot" notation.
+
+The Arr::get function also accepts a default value, which will be returned if the specific key is not found:
+```php
+
+$value = array_get($array, 'names.john', 'default');
+
+```
+
+Example usage
+---
+```php
+
+$array = ['products' => ['desk' => ['price' => 100]]];
+
+$value = array_get($array, 'products.desk');
+
+// ['price' => 100]
+
+```
+
+Parameters
+---
+
+_\ArrayAccess|array_  __$array__
+
+_string_  __$key__
+
+_mixed_  __$default__
+
+Return Value
+---
+__mixed__
