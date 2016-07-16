@@ -1,0 +1,43 @@
+\MyProject\LolitaFramework\Core\Str::startsWith
+===
+
+The Str::startsWith function determines if the given string begins with the given value.
+
+The second parameter can be a string or an array of strings. If it is a string the method returns true or false accordingly by checking in a case-sensitive manner. In case we pass an array of strings then the method returns true as long as one of the strings is the correct one.
+
+Example usage
+---
+```php
+
+$value = starts_with('This is my name', 'This');
+
+// true
+
+```
+
+```php
+
+$value = Str::startsWith('Lolita Framework is really awesome', 'lolita');
+
+// false
+
+```
+
+```php
+
+$value = Str::startsWith('Lolita Framework is really awesome', ['Lolita', 'Lolita']);
+
+// false
+
+```
+
+Parameters
+---
+
+_string_  __$haystack__
+
+_string|array_  __$needles__
+
+Return Value
+---
+__bool__
