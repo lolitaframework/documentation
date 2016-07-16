@@ -1,0 +1,27 @@
+\MyProject\LolitaFramework\Core\Arr::isAssoc
+===
+
+Determines if an array is associative.
+An array is "associative" if it doesn't have sequential numerical keys beginning with zero.
+
+Example usage
+---
+```php
+
+$assoc = Arr::isAssoc(['key' => 'value']);
+
+$notassoc = Arr::isAssoc([1,2,3]);
+
+// true
+// false
+
+```
+
+Parameters
+---
+
+_array_  __$array__
+
+Return Value
+---
+__bool__
