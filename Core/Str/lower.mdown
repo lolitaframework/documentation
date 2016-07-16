@@ -1,0 +1,23 @@
+\MyProject\LolitaFramework\Core\Str::lower
+===
+
+Convert the given string to lower-case.
+
+Example usage
+---
+```php
+
+$value = Str::limit('Lolita just fucking awesome framework');
+
+// lolita just fucking awesome framework
+
+```
+
+Parameters
+---
+
+_string_  __$value__
+
+Return Value
+---
+__string__
