@@ -1,0 +1,27 @@
+\MyProject\LolitaFramework\Core\Str::words
+===
+
+Limit the number of words in a string.
+
+Example usage
+---
+```php
+
+$value = Str::limit('Lolita just fucking awesome framework');
+
+// lolita just fucking awesome framework
+
+```
+
+Parameters
+---
+
+_string_  __$value__
+
+_int_     __$words__
+
+_string_  __$end__
+
+Return Value
+---
+__string__
