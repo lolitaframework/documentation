@@ -1,0 +1,31 @@
+\MyProject\LolitaFramework\Core\Str::value
+===
+
+Return the default value of the given value.
+
+Example usage
+---
+```php
+
+echo Str::value('i`am value');
+
+// i`am value
+
+```
+
+```php
+
+echo Str::value(function() { return 5*5; });
+
+// 25
+
+```
+
+Parameters
+---
+
+_mixed_  __$value__
+
+Return Value
+---
+__mixed__
