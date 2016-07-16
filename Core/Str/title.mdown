@@ -1,0 +1,23 @@
+\MyProject\LolitaFramework\Core\Str::title
+===
+
+Convert the given string to title case.
+
+Example usage
+---
+```php
+
+echo Str::upper('Lolita Framework is really awesome');
+
+// Lolita Framework Is Really Awesome
+
+```
+
+Parameters
+---
+
+_string_  __$value__
+
+Return Value
+---
+__string__
