@@ -7,9 +7,25 @@ Example usage
 ---
 ```php
 
-$value = Str::limit('Lolita just fucking awesome framework');
+$value = Str::words('Lolita just fucking awesome framework');
 
-// lolita just fucking awesome framework
+// Lolita just fucking awesome framework
+
+```
+
+```php
+
+$value = Str::words('Lolita just fucking awesome framework', 3);
+
+// Lolita just fucking...
+
+```
+
+```php
+
+$value = Str::words('Lolita just fucking awesome framework', 2, '###');
+
+// Lolita just###
 
 ```
 
