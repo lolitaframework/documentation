@@ -1,0 +1,22 @@
+\MyProject\LolitaFramework\Core\Arr::dot
+===
+`Arr::dot(array $array):array`
+
+The Arr::dot function flattens a multi-dimensional array into a single level array that uses "dot" notation to indicate depth:
+
+Example usage
+---
+```php
+$array = array_dot(['foo' => ['bar' => 'baz']]);
+
+// ['foo.bar' => 'baz'];
+```
+
+Parameters
+---
+[array]   **$array**
+[string]  **$prepend**
+
+Return Value
+---
+**Array**
