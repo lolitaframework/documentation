@@ -1,0 +1,33 @@
+\MyProject\LolitaFramework\Core\Str::quickRandom
+===
+
+Generate a "random" alpha-numeric string. Should not be considered sufficient for cryptography, etc.
+
+Example usage
+---
+```php
+
+$random = Str::quickRandom();
+
+// 16 chars long random alphanumeric string
+// Q7EPToH8la5M0SDh
+
+```
+
+```php
+
+$random = Str::random(3);
+
+// 3 chars long random alphanumeric string
+// w4G
+
+```
+
+Parameters
+---
+
+_int_  __$length__
+
+Return Value
+---
+__string__
