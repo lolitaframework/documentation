@@ -1,0 +1,43 @@
+\MyProject\LolitaFramework\Core\Str::finish
+===
+
+The Str::finish function adds a single instance of the given value to a string.
+
+If the cap already exists then nothing happens and the initial string is returned.
+
+Example usage
+---
+```php
+
+$string = Str::finish('this/string', '/');
+
+// this/string/
+
+```
+
+```php
+
+$string = Str::finish('Laravel is really awesome', ' and superb');
+
+// Laravel is really awesome and superb
+
+```
+
+```php
+
+$string = Str::finish('http://home/', '/');
+
+// http://home/
+
+```
+
+Parameters
+---
+
+_string_  __$value__
+
+_string_  __$cap__
+
+Return Value
+---
+__string__
