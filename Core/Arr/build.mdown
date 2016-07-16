@@ -1,0 +1,31 @@
+\MyProject\LolitaFramework\Core\Arr::build
+===
+`Arr::build(array $array, callable $callback):array`
+
+Build a new array using a callback.
+
+Example usage
+---
+```php
+$example_array = Arr::build(
+    array('key1' => 'value1'),
+    function($key, $value) {
+        return array(
+            (int) str_replace('key', '', $key),
+            (int) str_replace('value', '', $value)
+        );
+    }
+);
+
+// [1 => 1]
+```
+
+Parameters
+---
+[array] **$array**
+
+[callable] **$callable**
+
+Return Value
+---
+**Array** with new array.
