@@ -8,14 +8,19 @@ Example usage
 ```php
 $array = [100, 200, 300];
 
-$value = array_first(
-    $array, 
+$value = Arr::first(
+    [100, 200, 300],
     function ($key, $value) {
         return $value >= 150;
     }
 );
 
+$value2 = Arr::first(
+    [100, 200, 300]
+);
+
 // 200
+// 100
 ```
 
 Parameters
