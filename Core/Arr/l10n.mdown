@@ -1,0 +1,32 @@
+\MyProject\LolitaFramework\Core\Arr::l10n
+===
+
+Making l10n script data from array.
+
+Example usage
+---
+```php
+
+$l10n = Arr::l10n(
+    'my_data',
+    [
+        'lolitaframework' => 'best',
+        'genesis'         => 'suscks',
+    ]
+);
+echo $l10n;
+
+// <script type="text/javascript">var my_data = {"lolitaframework":"best","genesis":"suscks"};</script>
+
+```
+
+Parameters
+---
+
+_string_ __$object_name__ javascript object name.
+
+_array_ __$l10n__ array to convert into l10n script.
+
+Return Value
+---
+__string__ l10n string.
