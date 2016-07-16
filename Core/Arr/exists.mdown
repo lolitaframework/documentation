@@ -1,0 +1,24 @@
+\MyProject\LolitaFramework\Core\Arr::exists
+===
+
+Determine if the given key exists in the provided array.
+
+Example usage
+---
+```php
+$car = Arr::exists(array('bmw' => 'car', 'shtil' => 'chainsaw'), 'bmw');
+$nonexistent = Arr::exists(array('bmw' => 'car', 'shtil' => 'chainsaw'), 'nonexistent');
+
+// true
+// false
+```
+
+Parameters
+---
+_\ArrayAccess|array_ __$array__
+
+_string|int_ __$key__
+
+Return Value
+---
+__Bool__ true if exist false if not.

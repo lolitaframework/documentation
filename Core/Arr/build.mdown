@@ -1,6 +1,5 @@
 \MyProject\LolitaFramework\Core\Arr::build
 ===
-`Arr::build(array $array, callable $callback):array`
 
 Build a new array using a callback.
 

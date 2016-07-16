@@ -1,6 +1,5 @@
 \MyProject\LolitaFramework\Core\Arr::except
 ===
-`Arr::except(array $array):array`
 
 The Arr::except function removes the given key / value pairs from the array:
 

@@ -1,6 +1,5 @@
 \MyProject\LolitaFramework\Core\Arr::add
 ===
-`Arr::add(array $array, string $key, mixed $value):array`
 
 The Arr::add function adds a given key / value pair to the array if the given key doesn't already exist in the array.
 Example usage

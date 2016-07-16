@@ -1,6 +1,5 @@
 \MyProject\LolitaFramework\Core\Arr::collapse
 ===
-`Arr::collapse(array $array):array`
 
 The Arr::collapse function collapses an array of arrays into a single array:
 

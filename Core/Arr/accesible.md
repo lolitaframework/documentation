@@ -1,6 +1,5 @@
 \MyProject\LolitaFramework\Core\Arr::accesible
 ===
-`Arr::accesible(mixed $value):bool`
 
 Determine whether the given value is array accessible.
 
