@@ -1,0 +1,35 @@
+\MyProject\LolitaFramework\Core\Str::random
+===
+
+The Str::random function generates a random string of the specified length.
+
+Uses php 5.3.0 openssl_random_pseudo_bytes() function to produce random strings. If we want a string strong and sufficient for cryptography this is the method we need.
+
+Example usage
+---
+```php
+
+$random = Str::random();
+
+// 16 chars long random alphanumeric string
+// Q7EPToH8la5M0SDh
+
+```
+
+```php
+
+$random = Str::random(3);
+
+// 3 chars long random alphanumeric string
+// w4G
+
+```
+
+Parameters
+---
+
+_int_     __$length__
+
+Return Value
+---
+__string__
