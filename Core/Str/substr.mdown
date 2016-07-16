@@ -1,0 +1,25 @@
+\MyProject\LolitaFramework\Core\Str::substr
+===
+
+Returns the portion of string specified by the start and length parameters.
+
+Example usage
+---
+```php
+
+$value = Str::substr('Пример текста', 0, 6);
+
+// Пример
+
+```
+
+Parameters
+---
+
+_string_  __$string__
+_int_  __$start__
+_int|null_  __$length__
+
+Return Value
+---
+__string__
