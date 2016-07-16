@@ -1,0 +1,38 @@
+\MyProject\LolitaFramework\Core\Arr::pluck
+===
+
+The Arr::pluck function will pluck a list of the given key / value pairs from the array.
+
+You may also specify how you wish the resulting list to be keyed.
+
+Example usage
+---
+```php
+
+$array = [
+    ['developer' => ['id' => 1, 'name' => 'Taylor']],
+    ['developer' => ['id' => 2, 'name' => 'Abigail']],
+];
+
+$array = array_pluck($array, 'developer.name');
+
+// ['Taylor', 'Abigail'];
+
+$array = array_pluck($array, 'developer.name', 'developer.id');
+
+// [1 => 'Taylor', 2 => 'Abigail'];
+
+```
+
+Parameters
+---
+
+_array_  __$array__
+
+_string|array_  __$value__
+
+_string|array|null_  __$key__
+
+Return Value
+---
+__array__
