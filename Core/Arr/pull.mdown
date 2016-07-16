@@ -1,0 +1,31 @@
+\MyProject\LolitaFramework\Core\Arr::pull
+===
+
+The Arr::pull function returns and removes a key / value pair from the array.
+
+Example usage
+---
+```php
+
+$array = ['name' => 'Desk', 'price' => 100];
+
+$name = array_pull($array, 'name');
+
+// $name: Desk
+
+// $array: ['price' => 100]
+
+```
+
+Parameters
+---
+
+_array_   __$array__
+
+_string_  __$key__
+
+_mixed_   __$default__
+
+Return Value
+---
+__mixed__
