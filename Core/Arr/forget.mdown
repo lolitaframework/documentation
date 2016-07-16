@@ -1,0 +1,26 @@
+\MyProject\LolitaFramework\Core\Arr::forget
+===
+
+The Arr::forget function removes a given key / value pair from a deeply nested array using "dot" notation.
+
+Example usage
+---
+```php
+
+$array = ['products' => ['desk' => ['price' => 100]]];
+
+array_forget($array, 'products.desk');
+
+// ['products' => []]
+
+```
+
+Parameters
+---
+_array_  __$array__
+
+_array|string_  __$keys__
+
+Return Value
+---
+__void__
