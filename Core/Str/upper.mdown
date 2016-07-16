@@ -1,0 +1,23 @@
+\MyProject\LolitaFramework\Core\Str::upper
+===
+
+Convert the given string to upper-case.
+
+Example usage
+---
+```php
+
+echo Str::upper('Lolita Framework is really awesome');
+
+// LOLITA FRAMEWORK IS REALLY AWESOME
+
+```
+
+Parameters
+---
+
+_string_  __$value__
+
+Return Value
+---
+__string__
