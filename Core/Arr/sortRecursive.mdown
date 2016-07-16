@@ -1,0 +1,49 @@
+\MyProject\LolitaFramework\Core\Arr::sortRecursive
+===
+
+The Arr::sortRecursive function recursively sorts the array using the sort function.
+
+Example usage
+---
+```php
+
+$array = [
+    [
+        'Roman',
+        'Taylor',
+        'Li',
+    ],
+    [
+        'PHP',
+        'Ruby',
+        'JavaScript',
+    ],
+];
+
+$array = array_sort_recursive($array);
+
+/*
+    [
+        [
+            'Li',
+            'Roman',
+            'Taylor',
+        ],
+        [
+            'JavaScript',
+            'PHP',
+            'Ruby',
+        ]
+    ];
+*/
+
+```
+
+Parameters
+---
+
+_array_   __$array__
+
+Return Value
+---
+__array__
