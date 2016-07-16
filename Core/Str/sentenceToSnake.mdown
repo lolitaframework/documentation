@@ -1,0 +1,25 @@
+\MyProject\LolitaFramework\Core\Str::sentenceToSnake
+===
+
+Sentence like : "Hello i'm here" to snake "hello_im_here"
+
+Example usage
+---
+```php
+
+echo Str::sentenceToSnake('Hello i`m here');
+
+// hello_im_here
+
+```
+
+Parameters
+---
+
+_string_ __$val__ sentence.
+
+_string_ __$symbol__ snake symbol, default _.
+
+Return Value
+---
+__string__ sentence in snake case.
