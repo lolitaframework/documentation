@@ -12,11 +12,11 @@ $array = Arr:add(['name' => 'Desk'], 'price', 100);
 
 Parameters
 ---
-[array] **$array**
+_array_ **$array**
 
-[string] **$key**
+_string_ **$key**
 
-[mixed] **$value**
+_mixed_ **$value**
 
 Return Value
 ---

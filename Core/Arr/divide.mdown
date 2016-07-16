@@ -15,7 +15,7 @@ list($keys, $values) = array_divide(['name' => 'Desk']);
 
 Parameters
 ---
-[array] **$array**
+_array_ **$array**
 
 Return Value
 ---

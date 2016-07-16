@@ -21,9 +21,9 @@ $example_array = Arr::build(
 
 Parameters
 ---
-[array] **$array**
+_array_ **$array**
 
-[callable] **$callable**
+_callable_ **$callable**
 
 Return Value
 ---

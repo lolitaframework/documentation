@@ -13,8 +13,9 @@ $array = array_dot(['foo' => ['bar' => 'baz']]);
 
 Parameters
 ---
-[array]   **$array**
-[string]  **$prepend**
+_array_ **$array**
+
+_string_  **$prepend**
 
 Return Value
 ---

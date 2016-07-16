@@ -15,8 +15,9 @@ $array = array_except($array, ['price']);
 
 Parameters
 ---
-[array] **$array**
-[array|string] **$keys**
+_array_ **$array**
+
+_array|string_ **$keys**
 
 Return Value
 ---

@@ -1,0 +1,31 @@
+\MyProject\LolitaFramework\Core\Arr::first
+===
+
+The Arr::first function returns the first element of an array passing a given truth test.
+
+Example usage
+---
+```php
+$array = [100, 200, 300];
+
+$value = array_first(
+    $array, 
+    function ($key, $value) {
+        return $value >= 150;
+    }
+);
+
+// 200
+```
+
+Parameters
+---
+_array_ __$array__
+
+_callable|null_ __$callback__
+
+_mixed_ __$default__
+
+Return Value
+---
+__mixed__ Return the first element in an array passing a given truth test.

@@ -9,8 +9,8 @@ Example usage
 $car = Arr::exists(array('bmw' => 'car', 'shtil' => 'chainsaw'), 'bmw');
 $nonexistent = Arr::exists(array('bmw' => 'car', 'shtil' => 'chainsaw'), 'nonexistent');
 
-// true
-// false
+// $car = true
+// $nonexistent = false
 ```
 
 Parameters
