@@ -1,0 +1,23 @@
+\MyProject\LolitaFramework\Core\Str::ucfirst
+===
+
+Make a string's first character uppercase in any language.
+
+Example usage
+---
+```php
+
+$value = Str::ucfirst('пример текста');
+
+// Пример текста
+
+```
+
+Parameters
+---
+
+_string_  __$string__
+
+Return Value
+---
+__string__
