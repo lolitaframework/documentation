@@ -1,0 +1,33 @@
+\MyProject\LolitaFramework\Core\Str::slug
+===
+
+The Str::slug function generates a URL friendly "slug" from the given string.
+
+Example usage
+---
+```php
+
+$title = Str::slug('Lolita Framework', '-');
+
+// lolita-framework
+
+```
+
+```php
+
+$title = Str::slug('Lolita Framework', '_');
+
+// lolita_framework
+
+```
+
+Parameters
+---
+
+_string_  __$title__
+
+_string_  __$separator__
+
+Return Value
+---
+__string__
