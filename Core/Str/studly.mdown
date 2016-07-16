@@ -1,0 +1,23 @@
+\MyProject\LolitaFramework\Core\Str::studly
+===
+
+The Str::studly function converts the given string to StudlyCase.
+
+Example usage
+---
+```php
+
+$value = Str::studly('foo_bar');
+
+// FooBar
+
+```
+
+Parameters
+---
+
+_string_  __$value__
+
+Return Value
+---
+__string__
