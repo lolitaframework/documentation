@@ -1,0 +1,23 @@
+\MyProject\LolitaFramework\Core\Str::bracesToUnderline
+===
+
+Braces to underline
+
+Example usage
+---
+```php
+
+echo Str::bracesToUnderline('widget-lolita_logo_widget[5][gallery]');
+
+// widget-lolita_logo_widget_5_gallery
+
+```
+
+Parameters
+---
+
+_string_ __$str__ string with braces.
+
+Return Value
+---
+__string__ without braces.
