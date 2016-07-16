@@ -1,0 +1,50 @@
+\MyProject\LolitaFramework\Core\Str::snake
+===
+
+The Str::snake function converts the given string to snake_case.
+
+Example usage
+---
+```php
+
+$snake = Str::snake('fooBar');
+
+// foo_bar
+
+```
+
+```php
+
+$snake = Str::snake('LolitaFrameworkRocks');
+
+// lolita_framework_rocks
+
+```
+
+```php
+
+$snake = Str::snake('lolita framework rocks');
+
+// lolita framework rocks
+
+```
+
+
+```php
+
+$snake = Str::snake('LolitaFrameworkRocks', '-');
+
+// lolita-framework-rocks
+
+```
+
+Parameters
+---
+
+_string_  __$value__
+
+_string_  __$delimiter__
+
+Return Value
+---
+__string__
