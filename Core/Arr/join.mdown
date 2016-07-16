@@ -1,0 +1,31 @@
+\MyProject\LolitaFramework\Core\Arr::join
+===
+
+Join array to HTML attributes string.
+
+Example usage
+---
+```php
+
+$input = Arr::join([
+    'name'  => 'text',
+    'type'  => 'text',
+    'class' => 'some-css-class',
+    'value' => 'here is your value',
+]);
+echo "<input {$input}>";
+
+// <input name="text" type="text" class="some-css-class" value="here is your value">
+
+```
+
+Parameters
+---
+
+_array_ __$arr__ array like 'key' => 'value'.
+
+_string_ __$pattern__ join patter.
+
+Return Value
+---
+__string__ joined string.
