@@ -6,13 +6,42 @@ The Arr::forget function removes a given key / value pair from a deeply nested a
 Example usage
 ---
 ```php
-
-$array = ['products' => ['desk' => ['price' => 100]]];
-
-Arr::forget($array, 'products.desk');
+Arr::forget(
+    ['products' => ['desk' => ['price' => 100]]],
+    'products.desk'
+);
 
 // ['products' => []]
+```
 
+```php
+Arr::forget(
+    [
+        ['id' => 1, 'name' => 'John Doe'],
+        ['id' => 2, 'name' => 'Jane Doe'],
+    ],
+    '0.id'
+);
+
+// [
+//     ['name' => 'John Doe'],
+//     ['id' => 2, 'name' => 'Jane Doe']
+// ]
+```
+
+```php
+Arr::forget(
+    [
+        ['id' => 1, 'name' => 'John Doe'],
+        ['id' => 2, 'name' => 'Jane Doe'],
+    ],
+    ['0.id', '1.name']
+);
+
+// [
+//     ['name' => 'John Doe'],
+//     ['id' => 2]
+// ]
 ```
 
 Parameters
