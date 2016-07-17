@@ -13,6 +13,39 @@ list($keys, $values) = array_divide(['name' => 'Desk']);
 // $values: ['Desk']
 ```
 
+```php
+$array = Arr::divide([1,2,3]);
+
+// [
+//     [0,1,2],
+//     [1,2,3],
+// ]
+```
+
+```php
+$array = Arr::divide(['id' => 1, 'name' => 'John Doe']);
+
+// [
+//     ['id', 'name'],
+//     [1, 'John Doe'],
+// ]
+```
+
+```php
+$array = Arr::divide([
+    ['id' => 1, 'name' => 'John Doe'],
+    ['id' => 2, 'name' => 'Jane Doe'],
+]);
+
+// [
+//     [0,1],
+//     [
+//         ['id' => 1, 'name' => 'John Doe'],
+//         ['id' => 2, 'name' => 'Jane Doe'],
+//     ],
+// ]
+```
+
 Parameters
 ---
 _array_ **$array**
