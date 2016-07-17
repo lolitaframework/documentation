@@ -19,6 +19,24 @@ $example_array = Arr::build(
 // [1 => 1]
 ```
 
+```php
+$array1 = [
+    ['id' => 1, 'name' => 'John Doe'],
+    ['id' => 2, 'name' => 'Jane Doe'],
+    ['id' => 3, 'name' => 'Jack Doe']
+]; 
+
+$array2 = Arr::build($array1, function($key, $value) {
+    return [$value['id'], $value['name']];
+});
+
+// [
+//     1 => 'John Doe',
+//     2 => 'Jane Doe',
+//     3 => 'Jack Doe'
+// ]
+```
+
 Parameters
 ---
 _array_ **$array**
