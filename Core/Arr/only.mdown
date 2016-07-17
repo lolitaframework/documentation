@@ -6,13 +6,23 @@ The Arr::only function will return only the specified key / value pairs from the
 Example usage
 ---
 ```php
-
 $array = ['name' => 'Desk', 'price' => 100, 'orders' => 10];
 
 $array = Arr::only($array, ['name', 'price']);
 
 // ['name' => 'Desk', 'price' => 100]
+```
 
+```php
+$array1 = [
+    ['id' => 1, 'name' => 'John Doe'],
+    ['id' => 2, 'name' => 'Jane Doe'],
+    ['id' => 3, 'name' => 'Jack Doe']
+];
+
+$array2 = Arr::only($array1, 1);
+
+// [1 => ['id' => 2, 'name' => 'Jane Doe'] ]
 ```
 
 Parameters
