@@ -3,6 +3,8 @@
 
 The Arr::last function returns the last element in the given array.
 
+The callback function is a test for the array parameter. The last element of the array that could pass the test is returned. In case there is nothing returned the third parameter which is a callback is returned. This method uses the Arr::first() merhod, first calculates the first element that passes the test and then uses the array_reverse() method to return the array in reverse order and takes the first one from it.
+
 Example usage
 ---
 ```php
@@ -11,7 +13,20 @@ $array = [100, 200, 300];
 $last = Arr::last($array);
 
 // 300
+```
 
+```php
+$array1 = [1,2,3]; 
+
+$last = Arr::last(
+    $array1,
+    function($key, $value) {
+        return $key == 0;
+    },
+    [1,2,3]
+);
+
+// 3
 ```
 
 Parameters
