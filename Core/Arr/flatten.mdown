@@ -6,13 +6,18 @@ The Arr::flatten function will flatten a multi-dimensional array into a single l
 Example usage
 ---
 ```php
+$array = Arr::flatten(['name' => 'Joe', 'languages' => ['PHP', 'Ruby']]);
 
-$array = ['name' => 'Joe', 'languages' => ['PHP', 'Ruby']];
+// ['Joe', 'PHP', 'Ruby']
+```
 
-$array = Arr::flatten($array);
+```php
+$array = Arr::flatten([
+    ['id' => 1, 'name' => 'John Doe', 'skills' => []],
+    ['id' => 2, 'name' => 'Jane Doe', ['skills' => ['smart', 'pretty']]],
+]);
 
-// ['Joe', 'PHP', 'Ruby'];
-
+// [1, 'John Doe', 2, 'Jane Doe', 'smart', 'pretty']
 ```
 
 Parameters
