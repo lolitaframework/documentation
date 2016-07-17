@@ -10,6 +10,41 @@ $array = Arr:add(['name' => 'Desk'], 'price', 100);
 // ['name' => 'Desk', 'price' => 100]
 ```
 
+```php
+$array = Arr:add(
+    [
+        'name' => 'John Doe',
+        'age'  => 32,
+    ],
+    'age',
+    '25'
+);
+
+// ['name' => 'John Doe', 'age' => 32]
+```
+
+```php
+$array = Arr:add(
+    [
+        'name' => 'John Doe',
+        'age'  => 32,
+    ],
+    'kids.0',
+    ['name' => 'Baby Doe', 'age' => 1]
+);
+
+// [
+//    'name' => 'John Doe',
+//    'age'  => 32,
+//    'kids' => [
+//        [
+//            'name' => 'Baby Doe',
+//            'age'  => 1
+//        ]
+//    ]
+// ]
+```
+
 Parameters
 ---
 _array_ **$array**
