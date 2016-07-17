@@ -6,7 +6,7 @@ The Arr::divide function returns two arrays, one containing the keys, and the ot
 Example usage
 ---
 ```php
-list($keys, $values) = array_divide(['name' => 'Desk']);
+list($keys, $values) = Arr::divide(['name' => 'Desk']);
 
 // $keys: ['name']
 

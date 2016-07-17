@@ -6,9 +6,40 @@ The Arr::dot function flattens a multi-dimensional array into a single level arr
 Example usage
 ---
 ```php
-$array = array_dot(['foo' => ['bar' => 'baz']]);
+$array = Arr::dot(['foo' => ['bar' => 'baz']]);
 
 // ['foo.bar' => 'baz'];
+```
+
+```php
+$array = Arr::dot([
+    ['id' => 1, 'name' => 'John Doe'],
+    ['id' => 2, 'name' => 'Jane Doe'],
+]);
+
+// [
+//     '0.id' => 1,
+//     '0.name' => 'John Doe',
+//     '1.id' => 2,
+//     '1.name' => 'Jane Doe'
+// ]
+```
+
+```php
+$array = Arr::dot(
+    [
+        ['id' => 1, 'name' => 'John Doe'],
+        ['id' => 2, 'name' => 'Jane Doe'],
+    ],
+    'prefix'
+);
+
+// [
+//     'prefix0.id'   => 1,
+//     'prefix0.name' => 'John Doe',
+//     'prefix1.id'   => 2,
+//     'prefix1.name' => 'Jane Doe',
+// ]
 ```
 
 Parameters
