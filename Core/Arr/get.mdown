@@ -13,13 +13,33 @@ $value = Arr::get($array, 'names.john', 'default');
 Example usage
 ---
 ```php
-
 $array = ['products' => ['desk' => ['price' => 100]]];
 
 $value = Arr::get($array, 'products.desk');
 
 // ['price' => 100]
+```
 
+```php
+$array1 = [
+    ['id' => 1, 'name' => 'John Doe'],
+    ['id' => 2, 'name' => 'Jane Doe']
+];
+
+$result = Arr::get($array1, '1.name');
+
+// Jane Doe
+```
+
+```php
+$array1 = [
+    ['id' => 1, 'name' => 'John Doe'],
+    ['id' => 2, 'name' => 'Jane Doe']
+];
+
+$result = Arr::get($array1, '11.name', [1,2,3]);
+
+// [1,2,3]
 ```
 
 Parameters
