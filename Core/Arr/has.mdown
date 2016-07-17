@@ -6,13 +6,22 @@ The Arr::has function checks that a given item exists in an array using "dot" no
 Example usage
 ---
 ```php
-
 $array = ['products' => ['desk' => ['price' => 100]]];
 
 $hasDesk = Arr::has($array, 'products.desk');
 
 // true
+```
 
+```php
+$array1 = [
+    ['id' => 1, 'name' => 'John Doe'],
+    ['id' => 2, 'name' => 'Jane Doe']
+];
+
+$result = Arr::has($array1, '2.name');
+
+// false
 ```
 
 Parameters
