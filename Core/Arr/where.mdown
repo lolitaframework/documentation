@@ -9,7 +9,7 @@ Example usage
 
 $array = [100, '200', 300, '400', 500];
 
-$array = array_where($array, function ($key, $value) {
+$array = Arr::where($array, function ($key, $value) {
     return is_string($value);
 });
 

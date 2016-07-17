@@ -9,7 +9,7 @@ Example usage
 
 $array = ['products' => ['desk' => ['price' => 100]]];
 
-array_forget($array, 'products.desk');
+Arr::forget($array, 'products.desk');
 
 // ['products' => []]
 

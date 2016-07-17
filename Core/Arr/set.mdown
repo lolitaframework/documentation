@@ -9,7 +9,7 @@ Example usage
 
 $array = ['products' => ['desk' => ['price' => 100]]];
 
-array_set($array, 'products.desk.price', 200);
+Arr::set($array, 'products.desk.price', 200);
 
 // ['products' => ['desk' => ['price' => 200]]]
 

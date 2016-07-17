@@ -8,7 +8,7 @@ Example usage
 ```php
 $array = [100, 200, 300];
 
-$last = last($array);
+$last = Arr::last($array);
 
 // 300
 

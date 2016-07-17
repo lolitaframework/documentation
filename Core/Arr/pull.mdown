@@ -9,7 +9,7 @@ Example usage
 
 $array = ['name' => 'Desk', 'price' => 100];
 
-$name = array_pull($array, 'name');
+$name = Arr::pull($array, 'name');
 
 // $name: Desk
 

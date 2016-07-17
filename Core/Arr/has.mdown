@@ -9,7 +9,7 @@ Example usage
 
 $array = ['products' => ['desk' => ['price' => 100]]];
 
-$hasDesk = array_has($array, 'products.desk');
+$hasDesk = Arr::has($array, 'products.desk');
 
 // true
 

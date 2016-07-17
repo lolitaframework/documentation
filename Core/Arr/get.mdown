@@ -6,7 +6,7 @@ The Arr::get function retrieves a value from a deeply nested array using "dot" n
 The Arr::get function also accepts a default value, which will be returned if the specific key is not found:
 ```php
 
-$value = array_get($array, 'names.john', 'default');
+$value = Arr::get($array, 'names.john', 'default');
 
 ```
 
@@ -16,7 +16,7 @@ Example usage
 
 $array = ['products' => ['desk' => ['price' => 100]]];
 
-$value = array_get($array, 'products.desk');
+$value = Arr::get($array, 'products.desk');
 
 // ['price' => 100]
 

@@ -6,7 +6,7 @@ The Arr::first function returns the first element of an array passing a given tr
 A default value may also be passed as the third parameter to the method. This value will be returned if no value passes the truth test:
 
 ```php
-$value = array_first($array, $callback, $default);
+$value = Arr::first($array, $callback, $default);
 ```
 
 Example usage

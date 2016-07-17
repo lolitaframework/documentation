@@ -9,7 +9,7 @@ Example usage
 
 $array = ['name' => 'Joe', 'languages' => ['PHP', 'Ruby']];
 
-$array = array_flatten($array);
+$array = Arr::flatten($array);
 
 // ['Joe', 'PHP', 'Ruby'];
 

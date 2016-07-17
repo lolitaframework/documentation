@@ -6,11 +6,36 @@ The Arr::except function removes the given key / value pairs from the array:
 Example usage
 ---
 ```php
-$array = ['name' => 'Desk', 'price' => 100];
-
-$array = array_except($array, ['price']);
+$array = Arr::except(
+    ['name' => 'Desk', 'price' => 100],
+    ['price']
+);
 
 // ['name' => 'Desk']
+```
+
+```php
+$array = Arr::except(
+    [
+        ['id' => 1, 'name' => 'John Doe'],
+        ['id' => 2, 'name' => 'Jane Doe'],
+    ],
+    0
+);
+
+// [1 => ['id' => 2, 'name' => 'Jane Doe'] ]
+```
+
+```php
+$array = Arr::except(
+    [
+        ['id' => 1, 'name' => 'John Doe'],
+        ['id' => 2, 'name' => 'Jane Doe'],
+    ],
+    [0, 1]
+);
+
+// []
 ```
 
 Parameters

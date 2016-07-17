@@ -20,7 +20,7 @@ $array = [
     ],
 ];
 
-$array = array_sort_recursive($array);
+$array = Arr::sortRecursive($array);
 
 /*
     [

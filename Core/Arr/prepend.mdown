@@ -9,7 +9,7 @@ Example usage
 
 $array = ['one', 'two', 'three', 'four'];
 
-$array = array_prepend($array, 'zero');
+$array = Arr::prepend($array, 'zero');
 
 // $array: ['zero', 'one', 'two', 'three', 'four']
 

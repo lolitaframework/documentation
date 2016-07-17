@@ -14,11 +14,11 @@ $array = [
     ['developer' => ['id' => 2, 'name' => 'Abigail']],
 ];
 
-$array = array_pluck($array, 'developer.name');
+$array = Arr::pluck($array, 'developer.name');
 
 // ['Taylor', 'Abigail'];
 
-$array = array_pluck($array, 'developer.name', 'developer.id');
+$array = Arr::pluck($array, 'developer.name', 'developer.id');
 
 // [1 => 'Taylor', 2 => 'Abigail'];
 
