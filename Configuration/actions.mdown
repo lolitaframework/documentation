@@ -1,0 +1,6 @@
+Actions
+===
+
+The `Actions` config module is a wrapper of the WordPress action/hook API. The config module only handles a method in order to register/add action hooks.
+
+How it works: !(images/actions.gif)
