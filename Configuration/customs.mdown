@@ -1,0 +1,12 @@
+Customs
+===
+
+The `Customs` module is designed to provide the path to the folder with the PHP files that need to be load.
+
+Default config path
+---
+`{{ Project Name }}/app/config/customs.json`
+
+You can revrite this path by __lf\_config\_customs\_path__ filter.
+
+How it works: ![Deregister Scripts](images/customs.gif)
