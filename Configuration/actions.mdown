@@ -5,7 +5,7 @@ The `Actions` config module is a wrapper of the WordPress action/hook API. The c
 
 How it works: ![Actions](images/actions.gif)
 
-Default settings path
+Default config path
 ---
 `{{ Project Name }}/app/config/actions.json`
 
