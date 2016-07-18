@@ -76,3 +76,40 @@ wp_enqueue_style(
 ```
 
 How it works: ![Deregister Scripts](images/styles.gif)
+
+Custom loading styles, scripts with some conditions
+---
+Array keys:
+
+__custom__ --- load custom into front end.
+
+__admin\_custom__ --- load custom into back end.
+
+__login\_custom__ --- load custom into login page.
+
+Based on: [wp enqueue style](https://codex.wordpress.org/Function_Reference/wp_enqueue_style) And [wp enqueue script](https://codex.wordpress.org/Function_Reference/wp_enqueue_script)
+```php
+<?php
+wp_enqueue_script(
+    string $handle,
+    string $src = false,
+    array $deps = array(),
+    string|bool|null $ver = false,
+    bool $in_footer = false
+);
+?>
+```
+
+```php
+<?php
+wp_enqueue_style(
+    string $handle,
+    string $src = false,
+    array $deps = array(),
+    string|bool|null $ver = false,
+    string $media = 'all'
+);
+?>
+```
+
+How it works: ![Deregister Scripts](images/custom.gif)
