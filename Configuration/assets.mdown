@@ -39,7 +39,40 @@ __login\_scripts__ --- load scripts into login page.
 
 Based on: [wp enqueue script](https://codex.wordpress.org/Function_Reference/wp_enqueue_script)
 ```php
-<?php wp_enqueue_script( string $handle, string $src = false, array $deps = array(), string|bool|null $ver = false, bool $in_footer = false ); ?>
+<?php
+wp_enqueue_script(
+    string $handle,
+    string $src = false,
+    array $deps = array(),
+    string|bool|null $ver = false,
+    bool $in_footer = false
+);
+?>
 ```
 
 How it works: ![Deregister Scripts](images/scripts.gif)
+
+Loading styles
+---
+Array keys:
+
+__styles__ --- load styles into front end.
+
+__admin\_styles__ --- load styles into back end.
+
+__login\_styles__ --- load styles into login page.
+
+Based on: [wp enqueue style](https://codex.wordpress.org/Function_Reference/wp_enqueue_style)
+```php
+<?php
+wp_enqueue_style(
+    string $handle,
+    string $src = false,
+    array $deps = array(),
+    string|bool|null $ver = false,
+    string $media = 'all'
+);
+?>
+```
+
+How it works: ![Deregister Scripts](images/styles.gif)
