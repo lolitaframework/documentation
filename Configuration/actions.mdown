@@ -3,4 +3,4 @@ Actions
 
 The `Actions` config module is a wrapper of the WordPress action/hook API. The config module only handles a method in order to register/add action hooks.
 
-How it works: !(https://github.com/lolitaframework/documentation/raw/7f8709b1179bff37a5bc579aa89d6ef451d7a708/Configuration/images/actions.gif)
+How it works: ![Actions](images/actions.gif)
