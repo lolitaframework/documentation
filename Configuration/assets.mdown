@@ -77,6 +77,23 @@ wp_enqueue_style(
 
 How it works: ![Deregister Scripts](images/styles.gif)
 
+Localize script
+---
+Array keys:
+
+__localize__ --- load localize script into front end.
+
+__admin\_localize__ --- load localize script into back end.
+
+__login\_localize__ --- load localize script into login page.
+
+Based on: [wp localize script](https://codex.wordpress.org/Function_Reference/wp_localize_script)
+```php
+<?php wp_localize_script( $handle, $name, $data ) ?>
+```
+
+How it works: ![Deregister Scripts](images/localize.gif)
+
 Custom loading styles, scripts with some conditions
 ---
 Array keys:
