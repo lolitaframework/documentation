@@ -1,7 +1,7 @@
 Assets
 ===
 
-The `Assets` config module is responsible to easily load your stylesheet and/or javascript files. 
+The `Assets` config module is responsible to easily register/deregister your stylesheet and/or javascript files. 
 
 Default config path
 ---
@@ -11,7 +11,13 @@ You can revrite this path by __lf\_config\_assets\_path__ filter.
 
 Deregister scripts
 ---
-Array key: __deregister\_scripts__
+Array keys:
+
+__deregister\_scripts__ --- deregistering scripts from front end.
+
+__admin\_deregister\_scripts__ --- deregistering scripts from back end.
+
+__login\_deregister\_scripts__ --- deregistering scripts from login page.
 
 Based on: [wp deregister script](https://codex.wordpress.org/Function_Reference/wp_deregister_script)
 ```php
@@ -20,3 +26,20 @@ Based on: [wp deregister script](https://codex.wordpress.org/Function_Reference/
 
 How it works: ![Deregister Scripts](images/deregister_scripts.gif)
 
+
+Loading scripts
+---
+Array keys:
+
+__scripts__ --- load scripts into front end.
+
+__admin\_scripts__ --- load scripts into back end.
+
+__login\_scripts__ --- load scripts into login page.
+
+Based on: [wp enqueue script](https://codex.wordpress.org/Function_Reference/wp_enqueue_script)
+```php
+<?php wp_enqueue_script( string $handle, string $src = false, array $deps = array(), string|bool|null $ver = false, bool $in_footer = false ); ?>
+```
+
+How it works: ![Deregister Scripts](images/scripts.gif)
