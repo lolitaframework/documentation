@@ -1,0 +1,21 @@
+Languages
+===
+
+The `Languages` config module is responsible to easily load theme textdomain. 
+
+Default config path
+---
+`{{ Project Name }}/app/config/languages.json`
+
+You can revrite this path by __lf\_config\_languages\_path__ filter.
+
+Add image size
+---
+Array key: 
+**$domain_name**
+
+Parameters
+---
+
+**$path**
+(string) (Required) Path to language folder [available to load from model]. 
