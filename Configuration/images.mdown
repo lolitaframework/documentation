@@ -1,0 +1,32 @@
+Images
+===
+
+The `Images` config module is responsible to easily register new image sizes. 
+
+How it works: ![Actions](images/images.gif)
+
+Default config path
+---
+`{{ Project Name }}/app/config/images.json`
+
+You can revrite this path by __lf\_config\_images\_path__ filter.
+
+Add image size
+---
+Array key: 
+**$new_image_size_name**
+
+Parameters
+---
+
+**$width**
+(int) (Required) Image width in pixels.
+	
+**$height**
+(int) (Required) Image height in pixels.
+	
+**$crop**
+(bool|array) (Optional) Whether to crop images to specified width and height or resize. An array can specify positioning of the crop area.
+Default value: false
+
+**$in\_drop\_down** (Optional) Add image size to WordPress system image sizes dropdown.
