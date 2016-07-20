@@ -14,7 +14,7 @@ You can revrite this path by __lf\_config\_images\_path__ filter.
 Add image size
 ---
 Array key: 
-**$new_image_size_name**
+**$new\_image\_size\_name**
 
 Parameters
 ---

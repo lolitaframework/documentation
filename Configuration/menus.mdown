@@ -1,0 +1,23 @@
+Menus
+===
+
+The `Menus` config module is responsible to easily register new menu locations. 
+
+How it works: ![Actions](images/menus.gif)
+
+Default config path
+---
+`{{ Project Name }}/app/config/menus.json`
+
+You can revrite this path by __lf\_config\_menus\_path__ filter.
+
+Add image size
+---
+Array key: 
+**$new\_menu\_location\_name**
+
+Parameters
+---
+
+**$width**
+(int) (Required) Image width in pixels.

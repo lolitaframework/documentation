@@ -17,7 +17,7 @@ Parameters
 (string) (required) The name of the filter to hook the $function_to_add to.
 Default: None
 
-**$function_to_add**
+**$function\_to\_add**
 (callback) (required) The name of the function to be called when the filter is applied. Note: Only string-formatted syntaxes listed in the PHP documentation for the 'callback' type are valid.
 Default: None
 
