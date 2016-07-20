@@ -1,0 +1,28 @@
+Shortcodes
+===
+
+The `Shortcodes` config module is a wrapper of the WordPress shortcode API. The config module only handles a method in order to register/add shortcode.
+
+How it works: ![Actions](images/shortcodes.gif)
+
+Default config path
+---
+`{{ Project Name }}/app/config/shortcodes.json`
+
+You can revrite this path by __lf\_config\_shortcodes\_path__ filter.
+
+Add short code
+---
+Array key:
+
+**$short\_code\_tag**
+
+Parameters
+---
+**$func**
+(callable) (required) Hook to run when shortcode is found
+
+Default: None
+
+
+[Link to native documentation](https://codex.wordpress.org/ru:Shortcode_API)
