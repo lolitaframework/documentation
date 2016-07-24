@@ -53,8 +53,50 @@ Default: if empty, 'name' is set to value of 'label', and 'singular_name' is set
 * 'items_list' - String for the table hidden heading.
 * 'name_admin_bar' - String for use in New in Admin menu bar. Default is the same as `singular_name`.
 
+**description**
+(string) (optional) A short descriptive summary of what the post type is.
+Default: blank
+
+**public**
+(boolean) (optional) Controls how the type is visible to authors (show_in_nav_menus, show_ui) and readers (exclude_from_search, publicly_queryable).
+Default: false
+
+* 'true' - Implies exclude_from_search: false, publicly_queryable: true, show_in_nav_menus: true, and show_ui:true. The built-in types attachment, page, and post are similar to this.
+* 'false' - Implies exclude_from_search: true, publicly_queryable: false, show_in_nav_menus: false, and show_ui: false. The built-in types nav_menu_item and revision are similar to this. Best used if you'll provide your own editing and viewing interfaces (or none at all).
+
+**exclude_from_search**
+(boolean) (importance) Whether to exclude posts with this post type from front end search results.
+Default: value of the opposite of public argument
+
+* 'true' - site/?s=search-term will not include posts of this post type.
+* 'false' - site/?s=search-term will include posts of this post type.
+
+**Note:** If you want to show the posts's list that are associated to taxonomy's terms, you must set exclude_from_search to false (ie : for call site_domaine/?taxonomy_slug=term_slug or site_domaine/taxonomy_slug/term_slug). If you set to true, on the taxonomy page (ex: taxonomy.php) WordPress will not find your posts and/or pagination will make 404 error...
 
 
+**publicly_queryable**
+(boolean) (optional) Whether queries can be performed on the front end as part of parse_request().
+Default: value of public argument
 
+**Note:** The queries affected include the following (also initiated when rewrites are handled)
+
+* ?post_type={post_type_key}
+* ?{post_type_key}={single_post_slug}
+* ?{post_type_query_var}={single_post_slug}
+
+**Note:** If query_var is empty, null, or a boolean FALSE, WordPress will still attempt to interpret it (4.2.2) and previews/views of your custom post will return 404s.
+
+**show_ui**
+(boolean) (optional) Whether to generate a default UI for managing this post type in the admin.
+Default: value of public argument
+
+* 'false' - do not display a user-interface for this post type
+* 'true' - display a user-interface (admin panel) for this post type
+
+**Note:** _built-in post types, such as post and page, are intentionally set to false.
+
+**show\_in\_nav\_menus**
+(boolean) (optional) Whether post_type is available for selection in navigation menus.
+Default: value of public argument
 
 [Link to native documentation](https://codex.wordpress.org/Function_Reference/register_post_type)
