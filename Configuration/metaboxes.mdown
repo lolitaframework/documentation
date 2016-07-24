@@ -7,6 +7,10 @@ How it works:
 
 1. **Without view**
 ![Actions](images/metaboxes_empty.gif)
+2. **With custom view**
+![Actions](images/metaboxes_view.gif)
+3. **With controls**
+![Actions](images/metaboxes_controls.gif)
 
 Default config path
 ---
