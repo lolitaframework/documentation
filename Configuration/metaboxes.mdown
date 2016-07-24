@@ -3,7 +3,10 @@ Metaboxes
 
 As the name suggests, the `Metabox` config module helps you build custom WordPress metabox. A metabox can be is a UI container for your custom fields (post metadata).
 
-How it works: ![Actions](images/metaboxes.gif)
+How it works: 
+
+1. **Without view**
+![Actions](images/metaboxes_empty.gif)
 
 Default config path
 ---
@@ -40,7 +43,7 @@ Default value: 'default'
 (array) (Optional) Data that should be set as the $args property of the box array (which is the second parameter passed to your callback).
 Default value: null
 
-**$controls**
+**$controls** (array) (Optional) Lolita Framework controls list.
 
 
 
