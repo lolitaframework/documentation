@@ -11,7 +11,7 @@ Default config path
 
 You can revrite this path by __lf\_config\_actions\_path__ filter.
 
-Parameters
+Arguments
 ---
 __$tag__
 (string) (Required) The name of the action to which the $function_to_add is hooked.

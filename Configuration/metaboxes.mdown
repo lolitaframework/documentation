@@ -23,7 +23,7 @@ Add Metabox
 Array key: 
 **$meta\_box\_id**
 
-Parameters
+Arguments
 ---
 **$title**
 (string) (Required) Title of the meta box.

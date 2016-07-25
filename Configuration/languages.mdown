@@ -14,7 +14,7 @@ Add image size
 Array key: 
 **$domain_name**
 
-Parameters
+Arguments
 ---
 
 **$path**

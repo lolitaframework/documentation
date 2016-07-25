@@ -16,7 +16,7 @@ Add image size
 Array key: 
 **$new_menu_location_name**
 
-Parameters
+Arguments
 ---
 
 **$width**

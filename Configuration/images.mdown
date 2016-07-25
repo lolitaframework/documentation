@@ -16,7 +16,7 @@ Add image size
 Array key: 
 **$new\_image\_size\_name**
 
-Parameters
+Arguments
 ---
 
 **$width**

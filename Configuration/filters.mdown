@@ -11,7 +11,7 @@ Default config path
 
 You can revrite this path by __lf\_config\_filters\_path__ filter.
 
-Parameters
+Arguments
 ---
 **$tag**
 (string) (required) The name of the filter to hook the $function_to_add to.
