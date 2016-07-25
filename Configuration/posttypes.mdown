@@ -64,7 +64,7 @@ Default: false
 * 'true' - Implies exclude_from_search: false, publicly_queryable: true, show_in_nav_menus: true, and show_ui:true. The built-in types attachment, page, and post are similar to this.
 * 'false' - Implies exclude_from_search: true, publicly_queryable: false, show_in_nav_menus: false, and show_ui: false. The built-in types nav_menu_item and revision are similar to this. Best used if you'll provide your own editing and viewing interfaces (or none at all).
 
-**exclude_from_search**
+**exclude\_from\_search**
 (boolean) (importance) Whether to exclude posts with this post type from front end search results.
 Default: value of the opposite of public argument
 
@@ -74,7 +74,7 @@ Default: value of the opposite of public argument
 **Note:** If you want to show the posts's list that are associated to taxonomy's terms, you must set exclude_from_search to false (ie : for call site_domaine/?taxonomy_slug=term_slug or site_domaine/taxonomy_slug/term_slug). If you set to true, on the taxonomy page (ex: taxonomy.php) WordPress will not find your posts and/or pagination will make 404 error...
 
 
-**publicly_queryable**
+**publicly\_queryable**
 (boolean) (optional) Whether queries can be performed on the front end as part of parse_request().
 Default: value of public argument
 
@@ -86,7 +86,7 @@ Default: value of public argument
 
 **Note:** If query_var is empty, null, or a boolean FALSE, WordPress will still attempt to interpret it (4.2.2) and previews/views of your custom post will return 404s.
 
-**show_ui**
+**show\_ui**
 (boolean) (optional) Whether to generate a default UI for managing this post type in the admin.
 Default: value of public argument
 
@@ -98,5 +98,65 @@ Default: value of public argument
 **show\_in\_nav\_menus**
 (boolean) (optional) Whether post_type is available for selection in navigation menus.
 Default: value of public argument
+
+**show\_in\_menu**
+(boolean or string) (optional) Where to show the post type in the admin menu. show_ui must be true.
+Default: value of show_ui argument
+
+* 'false' - do not display in the admin menu
+* 'true' - display as a top level menu
+* 'some string' - If an existing top level page such as 'tools.php' or 'edit.php?post_type=page', the post type will be placed as a sub menu of that.
+
+**Note:** When using 'some string' to show as a submenu of a menu page created by a plugin, this item will become the first submenu item, and replace the location of the top-level link. If this isn't desired, the plugin that creates the menu page needs to set the add_action priority for admin_menu to 9 or lower.
+
+**Note:** As this one inherits its value from show_ui, which inherits its value from public, it seems to be the most reliable property to determine, if a post type is meant to be publicly useable. At least this works for _builtin post types and only gives back post and page.
+
+**show\_in\_admin\_bar**
+(boolean) (optional) Whether to make this post type available in the WordPress admin bar.
+Default: value of the show_in_menu argument
+
+**menu_position**
+(integer) (optional) The position in the menu order the post type should appear. show_in_menu must be true.
+Default: null - defaults to below Comments
+
+* 5 - below Posts
+* 10 - below Media
+* 15 - below Links
+* 20 - below Pages
+* 25 - below comments
+* 60 - below first separator
+* 65 - below Plugins
+* 70 - below Users
+* 75 - below Tools
+* 80 - below Settings
+* 100 - below second separator
+
+**menu_icon**
+(string) (optional) The url to the icon to be used for this menu or the name of the icon from the iconfont
+Default: null - defaults to the posts icon
+
+**Examples**
+
+* 'dashicons-video-alt' (Uses the video icon from Dashicons[2])
+* 'get_template_directory_uri() . "/images/cutom-posttype-icon.png"' (Use a image located in the current theme)
+
+**capability_type**
+(string or array) (optional) The string to use to build the read, edit, and delete capabilities. May be passed as an array to allow for alternative plurals when using this argument as a base to construct the capabilities, e.g. array('story', 'stories') the first array element will be used for the singular capabilities and the second array element for the plural capabilities, this is instead of the auto generated version if no array is given which would be "storys". The 'capability_type' parameter is used as a base to construct capabilities unless they are explicitly set with the 'capabilities' parameter. It seems that `map_meta_cap` needs to be set to false or null, to make this work (see note 2 below).
+Default: "post"
+
+**Example** with "book" or "array( 'book', 'books' )" value, it's generate the 7 capabilities equal to set capabilities parameter to this :
+
+```php
+'capabilities' => array(
+  'edit_post'          => 'edit_book', 
+  'read_post'          => 'read_book', 
+  'delete_post'        => 'delete_book', 
+  'edit_posts'         => 'edit_books', 
+  'edit_others_posts'  => 'edit_others_books', 
+  'publish_posts'      => 'publish_books',       
+  'read_private_posts' => 'read_private_books', 
+  'create_posts'       => 'edit_books', 
+),
+```
 
 [Link to native documentation](https://codex.wordpress.org/Function_Reference/register_post_type)
