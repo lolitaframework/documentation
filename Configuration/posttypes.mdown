@@ -12,259 +12,373 @@ Default config path
 You can revrite this path by __lf\_config\_posttypes\_path__ filter.
 
 
-Parameters
+Arguments
 ---
-**$singular**
+`singular`
 (string) (Required)  Name for one object of this post type. From this will be generated plural and slug.
 
-**$plural**
+`plural`
 (string) (Optional) Name for few object of this post type.
 
-**label**
-(string) (optional) A plural descriptive name for the post type marked for translation.
+`label` ([_string_][8]) (_optional_) A **plural** descriptive name for the post type marked for translation.
+
+
 Default: Value of $labels['name']
 
-**labels**
-(array) (optional) labels - An array of labels for this post type. By default, post labels are used for non-hierarchical post types and page labels for hierarchical ones.
+`labels`
+
+([_array_][9]) (_optional_) labels - An array of labels for this post type. By default, post labels are used for non-hierarchical post types and page labels for hierarchical ones.
+
+
 Default: if empty, 'name' is set to value of 'label', and 'singular_name' is set to value of 'name'.
-'name' - general name for the post type, usually plural. The same and overridden by $post_type_object->label. Default is Posts/Pages
 
-* 'singular_name' - name for one object of this post type. Default is Post/Page
-* 'add_new' - the add new text. The default is "Add New" for both hierarchical and non-hierarchical post types. When internationalizing this string, please use a gettext context matching your post type. Example: _x('Add New', 'product');
-* 'add_new_item' - Default is Add New Post/Add New Page.
-* 'edit_item' - Default is Edit Post/Edit Page.
-* 'new_item' - Default is New Post/New Page.
-* 'view_item' - Default is View Post/View Page.
-* 'search_items' - Default is Search Posts/Search Pages.
-* 'not_found' - Default is No posts found/No pages found.
-* 'not_found_in_trash' - Default is No posts found in Trash/No pages found in Trash.
-* 'parent_item_colon' - This string isn't used on non-hierarchical types. In hierarchical ones the default is 'Parent Page:'.
-* 'all_items' - String for the submenu. Default is All Posts/All Pages.
-* 'archives' - String for use with archives in nav menus. Default is Post Archives/Page Archives.
-* 'insert_into_item' - String for the media frame button. Default is Insert into post/Insert into page.
-* 'uploaded_to_this_item' - String for the media frame filter. Default is Uploaded to this post/Uploaded to this page.
-* 'featured_image' - Default is Featured Image.
-* 'set_featured_image' - Default is Set featured image.
-* 'remove_featured_image' - Default is Remove featured image.
-* 'use_featured_image' - Default is Use as featured image.
-* 'menu_name' - Default is the same as `name`.
-* 'filter_items_list' - String for the table views hidden heading.
-* 'items_list_navigation' - String for the table pagination hidden heading.
-* 'items_list' - String for the table hidden heading.
-* 'name_admin_bar' - String for use in New in Admin menu bar. Default is the same as `singular_name`.
+* '**name'** \- general name for the post type, usually plural. The same and overridden by $post_type_object->label. Default is Posts/Pages
+* '**singular_name'** \- name for one object of this post type. Default is Post/Page
+* '**add_new'** \- the add new text. The default is "Add New" for both hierarchical and non-hierarchical post types. When internationalizing this string, please use a [gettext context][10] matching your post type. Example: `_x('Add New', 'product');`
+* '**add_new_item'** \- Default is Add New Post/Add New Page.
+* '**edit_item'** \- Default is Edit Post/Edit Page.
+* '**new_item'** \- Default is New Post/New Page.
+* '**view_item'** \- Default is View Post/View Page.
+* '**search_items'** \- Default is Search Posts/Search Pages.
+* '**not_found'** \- Default is No posts found/No pages found.
+* '**not_found_in_trash'** \- Default is No posts found in Trash/No pages found in Trash.
+* '**parent_item_colon'** \- This string isn't used on non-hierarchical types. In hierarchical ones the default is 'Parent Page:'.
+* '**all_items'** \- String for the submenu. Default is All Posts/All Pages.
+* '**archives'** \- String for use with archives in nav menus. Default is Post Archives/Page Archives.
+* '**insert_into_item'** \- String for the media frame button. Default is Insert into post/Insert into page.
+* '**uploaded_to_this_item'** \- String for the media frame filter. Default is Uploaded to this post/Uploaded to this page.
+* '**featured_image'** \- Default is Featured Image.
+* '**set_featured_image'** \- Default is Set featured image.
+* '**remove_featured_image'** \- Default is Remove featured image.
+* '**use_featured_image'** \- Default is Use as featured image.
+* '**menu_name'** \- Default is the same as `name`.
+* '**filter_items_list'** \- String for the table views hidden heading.
+* '**items_list_navigation'** \- String for the table pagination hidden heading.
+* '**items_list'** \- String for the table hidden heading.
+* '**name_admin_bar'** \- String for use in New in Admin menu bar. Default is the same as `singular_name`.
 
-**description**
-(string) (optional) A short descriptive summary of what the post type is.
+Above, the first default value is for non-hierarchical post types (like posts) and the second one is for hierarchical post types (like pages).
+
+`description`
+
+([_string_][8]) (_optional_) A short descriptive summary of what the post type is.
+
+
 Default: blank
 
-**public**
-(boolean) (optional) Controls how the type is visible to authors (show_in_nav_menus, show_ui) and readers (exclude_from_search, publicly_queryable).
+`public`
+
+([_boolean_][11]) (_optional_) Controls how the type is visible to authors (`show_in_nav_menus`, `show_ui`) and readers (`exclude_from_search`, `publicly_queryable`).
+
+
 Default: false
 
-* 'true' - Implies exclude_from_search: false, publicly_queryable: true, show_in_nav_menus: true, and show_ui:true. The built-in types attachment, page, and post are similar to this.
-* 'false' - Implies exclude_from_search: true, publicly_queryable: false, show_in_nav_menus: false, and show_ui: false. The built-in types nav_menu_item and revision are similar to this. Best used if you'll provide your own editing and viewing interfaces (or none at all).
+* '**true'** \- Implies `exclude_from_search: false`, `publicly_queryable: true`, `show_in_nav_menus: true`, and `show_ui:true`. The built-in types _attachment_, _page_, and _post_ are similar to this.
+* '**false'** \- Implies `exclude_from_search: true`, `publicly_queryable: false`, `show_in_nav_menus: false`, and `show_ui: false`. The built-in types _nav_menu_item_ and _revision_ are similar to this. Best used if you'll provide your own editing and viewing interfaces (or none at all).
 
-**exclude\_from\_search**
-(boolean) (importance) Whether to exclude posts with this post type from front end search results.
-Default: value of the opposite of public argument
 
-* 'true' - site/?s=search-term will not include posts of this post type.
+If no value is specified for `exclude_from_search`, `publicly_queryable`, `show_in_nav_menus`, or `show_ui`, they inherit their values from `public`.
+
+`exclude_from_search`
+
+([_boolean_][11]) (_importance_) Whether to exclude posts with this post type from front end search results.
+
+
+Default: value of the **opposite** of _public_ argument
+* 'true' - site/?s=search-term will **not** include posts of this post type.
 * 'false' - site/?s=search-term will include posts of this post type.
+
+
 
 **Note:** If you want to show the posts's list that are associated to taxonomy's terms, you must set exclude_from_search to false (ie : for call site_domaine/?taxonomy_slug=term_slug or site_domaine/taxonomy_slug/term_slug). If you set to true, on the taxonomy page (ex: taxonomy.php) WordPress will not find your posts and/or pagination will make 404 error...
 
+`publicly_queryable`
 
-**publicly\_queryable**
-(boolean) (optional) Whether queries can be performed on the front end as part of parse_request().
-Default: value of public argument
+([_boolean_][11]) (_optional_) Whether queries can be performed on the front end as part of parse_request().
+
+
+Default: value of _public_ argument
+
 
 **Note:** The queries affected include the following (also initiated when rewrites are handled)
+*  ?post_type={post_type_key}
+*  ?{post_type_key}={single_post_slug}
+*  ?{post_type_query_var}={single_post_slug}
 
-* ?post_type={post_type_key}
-* ?{post_type_key}={single_post_slug}
-* ?{post_type_query_var}={single_post_slug}
 
 **Note:** If query_var is empty, null, or a boolean FALSE, WordPress will still attempt to interpret it (4.2.2) and previews/views of your custom post will return 404s.
 
-**show\_ui**
-(boolean) (optional) Whether to generate a default UI for managing this post type in the admin.
-Default: value of public argument
+`show_ui`
+
+([_boolean_][11]) (_optional_) Whether to generate a default UI for managing this post type in the admin.
+
+
+Default: value of _public_ argument
 
 * 'false' - do not display a user-interface for this post type
 * 'true' - display a user-interface (admin panel) for this post type
 
-**Note:** _built-in post types, such as post and page, are intentionally set to false.
 
-**show\_in\_nav\_menus**
-(boolean) (optional) Whether post_type is available for selection in navigation menus.
-Default: value of public argument
+Note: `_built-in` post types, such as post and page, are intentionally set to false.
 
-**show\_in\_menu**
-(boolean or string) (optional) Where to show the post type in the admin menu. show_ui must be true.
-Default: value of show_ui argument
+`show_in_admin_bar`
 
-* 'false' - do not display in the admin menu
-* 'true' - display as a top level menu
-* 'some string' - If an existing top level page such as 'tools.php' or 'edit.php?post_type=page', the post type will be placed as a sub menu of that.
+([_boolean_][11]) (_optional_) Whether to make this post type available in the WordPress admin bar.
 
-**Note:** When using 'some string' to show as a submenu of a menu page created by a plugin, this item will become the first submenu item, and replace the location of the top-level link. If this isn't desired, the plugin that creates the menu page needs to set the add_action priority for admin_menu to 9 or lower.
 
-**Note:** As this one inherits its value from show_ui, which inherits its value from public, it seems to be the most reliable property to determine, if a post type is meant to be publicly useable. At least this works for _builtin post types and only gives back post and page.
-
-**show\_in\_admin\_bar**
-(boolean) (optional) Whether to make this post type available in the WordPress admin bar.
 Default: value of the show_in_menu argument
 
-**menu_position**
-(integer) (optional) The position in the menu order the post type should appear. show_in_menu must be true.
-Default: null - defaults to below Comments
+`capability_type`
 
-* 5 - below Posts
-* 10 - below Media
-* 15 - below Links
-* 20 - below Pages
-* 25 - below comments
-* 60 - below first separator
-* 65 - below Plugins
-* 70 - below Users
-* 75 - below Tools
-* 80 - below Settings
-* 100 - below second separator
+([_string or array_][12]) (_optional_) The string to use to build the read, edit, and delete capabilities. May be passed as an array to allow for alternative plurals when using this argument as a base to construct the capabilities, e.g. array('story', 'stories') the first array element will be used for the singular capabilities and the second array element for the plural capabilities, this is instead of the auto generated version if no array is given which would be "storys". The 'capability_type' parameter is used as a base to construct capabilities unless they are explicitly set with the 'capabilities' parameter. It seems that `map_meta_cap` needs to be set to false or null, to make this work (see note 2 below).
 
-**menu_icon**
-(string) (optional) The url to the icon to be used for this menu or the name of the icon from the iconfont
-Default: null - defaults to the posts icon
 
-**Examples**
-
-* 'dashicons-video-alt' (Uses the video icon from Dashicons[2])
-* 'get_template_directory_uri() . "/images/cutom-posttype-icon.png"' (Use a image located in the current theme)
-
-**capability_type**
-(string or array) (optional) The string to use to build the read, edit, and delete capabilities. May be passed as an array to allow for alternative plurals when using this argument as a base to construct the capabilities, e.g. array('story', 'stories') the first array element will be used for the singular capabilities and the second array element for the plural capabilities, this is instead of the auto generated version if no array is given which would be "storys". The 'capability_type' parameter is used as a base to construct capabilities unless they are explicitly set with the 'capabilities' parameter. It seems that `map_meta_cap` needs to be set to false or null, to make this work (see note 2 below).
 Default: "post"
+
 
 **Example** with "book" or "array( 'book', 'books' )" value, it's generate the 7 capabilities equal to set capabilities parameter to this :
 
-```php
-'capabilities' => array(
-  'edit_post'          => 'edit_book', 
-  'read_post'          => 'read_book', 
-  'delete_post'        => 'delete_book', 
-  'edit_posts'         => 'edit_books', 
-  'edit_others_posts'  => 'edit_others_books', 
-  'publish_posts'      => 'publish_books',       
-  'read_private_posts' => 'read_private_books', 
-  'create_posts'       => 'edit_books', 
-),
-```
+    'capabilities' => array(
+      'edit_post'          => 'edit_book',
+      'read_post'          => 'read_book',
+      'delete_post'        => 'delete_book',
+      'edit_posts'         => 'edit_books',
+      'edit_others_posts'  => 'edit_others_books',
+      'publish_posts'      => 'publish_books',
+      'read_private_posts' => 'read_private_books',
+      'create_posts'       => 'edit_books',
+    ),
+
 
 **Note 1:** The "create_posts" capability correspond to "edit_books" so it become equal to "edit_posts".
 
+
 **Note 2:** See capabilities note 2 about meta capabilities mapping for custom post type.
 
-You can take a look into the $GLOBALS['wp_post_types']['your_cpt_name'] array, then you'll see the following:
 
-```php
-[cap] => stdClass Object
-	(
-		// Meta capabilities
-		[edit_post] => edit_book
-		[read_post] => read_book
-		[delete_post] => delete_book
+You can take a look into the `$GLOBALS['wp_post_types']['your_cpt_name']` array, then you'll see the following:
 
-		// Primitive capabilities used outside of map_meta_cap():
-		[edit_posts] => edit_books
-		[edit_others_posts] => edit_others_books
-		[publish_posts] => publish_books
-		[read_private_posts] => read_private_books
+    [cap] => stdClass Object
+        (
+            // Meta capabilities
+            [edit_post] => edit_book
+            [read_post] => read_book
+            [delete_post] => delete_book
 
-		// Primitive capabilities used within map_meta_cap():
-		[create_posts] => edit_books
-	)
-```
+            // Primitive capabilities used outside of map_meta_cap():
+            [edit_posts] => edit_books
+            [edit_others_posts] => edit_others_books
+            [publish_posts] => publish_books
+            [read_private_posts] => read_private_books
+
+            // Primitive capabilities used within map_meta_cap():
+            [create_posts] => edit_books
+        )
+
 
 Some of the capability types that can be used (probably not exhaustive list):
 
-* post (default)
-* page
 
 These built-in types cannot be used:
 
-* attachment
-* mediapage
 
 **Note 3:** If you use capabilities parameter, capability_type complete your capabilities.
 
-**capabilities**
-(array) (optional) An array of the capabilities for this post type.
+`capabilities`
+
+([_array_][9]) (_optional_) An array of the capabilities for this post type.
+
+
 Default: capability_type is used to construct
+
 
 By default, seven keys are accepted as part of the capabilities array:
 
-* edit\_post, read_post, and delete_post - These three are meta capabilities, which are then generally mapped to corresponding primitive capabilities depending on the context, for example the post being edited/read/deleted and the user or role being checked. Thus these capabilities would generally not be granted directly to users or roles.
-* edit\_posts - Controls whether objects of this post type can be edited.
-* edit\_others\_posts - Controls whether objects of this type owned by other users can be edited. If the post type does not support an author, then this will behave like edit_posts.
-* publish\_posts - Controls publishing objects of this post type.
-* read\_private\_posts - Controls whether private objects can be read.
+* edit_post, read_post, and delete_post - These three are **meta capabilities**, which are then generally mapped to corresponding **primitive capabilities** depending on the context, for example the post being edited/read/deleted and the user or role being checked. Thus these capabilities would generally not be granted directly to users or roles.
+* edit_posts - Controls whether objects of this post type can be edited.
+* edit_others_posts - Controls whether objects of this type owned by other users can be edited. If the post type does not support an author, then this will behave like edit_posts.
+* publish_posts - Controls publishing objects of this post type.
+* read_private_posts - Controls whether private objects can be read.
 
-**Note 1:** those last four primitive capabilities are checked in core in various locations.
 
-There are also eight other primitive capabilities which are not referenced directly in core, except in map_meta_cap(), which takes the three aforementioned meta capabilities and translates them into one or more primitive capabilities that must then be checked against the user or role, depending on the context. These additional capabilities are only used in map_meta_cap(). Thus, they are only assigned by default if the post type is registered with the 'map_meta_cap' argument set to true (default is false).
+**Note 1:** those last four **primitive capabilities** are checked in core in various locations.
 
+
+There are also eight other **primitive capabilities** which are not referenced directly in core, except in map_meta_cap(), which takes the three aforementioned **meta capabilities** and translates them into one or more **primitive capabilities** that must then be checked against the user or role, depending on the context. These additional capabilities are only used in map_meta_cap(). Thus, they are only assigned by default if the post type is registered with **the 'map_meta_cap' argument set to true** (default is false).
 * read - Controls whether objects of this post type can be read.
-* delete\_posts - Controls whether objects of this post type can be deleted.
-* delete\_private\_posts - Controls whether private objects can be deleted.
-* delete\_published\_posts - Controls whether published objects can be deleted.
-* delete\_others\_posts - Controls whether objects owned by other users can be can be deleted. If the post type does not support an author, then this will behave like delete_posts.
-* edit\_private\_posts - Controls whether private objects can be edited.
-* edit\_published\_posts - Controls whether published objects can be edited.
-* create\_posts - Controls whether new objects can be created
+* delete_posts - Controls whether objects of this post type can be deleted.
+* delete_private_posts - Controls whether private objects can be deleted.
+* delete_published_posts - Controls whether published objects can be deleted.
+* delete_others_posts - Controls whether objects owned by other users can be can be deleted. If the post type does not support an author, then this will behave like delete_posts.
+* edit_private_posts - Controls whether private objects can be edited.
+* edit_published_posts - Controls whether published objects can be edited.
+* create_posts - Controls whether new objects can be created
 
-**Note 2:** In fact, when some user have a role with just the post type capabilies it isn't enough for create new object... It's because meta capabilities for custom post types were not being automatically mapped, so we couldn’t have granular control over permissions. To map meta capabilities for custom post types we can use map_meta_cap hook as it's explain here : http://justintadlock.com/archives/2010/07/10/meta-capabilities-for-custom-post-types.
 
-If you assign a 'capability_type' and then take a look into the $GLOBALS['wp_post_types']['your_cpt_name'] array, then you'll see the following:
+**Note 2:** In fact, when some user have a role with just the post type capabilies it isn't enough for create new object... It's because meta capabilities for custom post types were not being automatically mapped, so we couldn't have granular control over permissions. To map meta capabilities for custom post types we can use map_meta_cap hook as it's explain here : .
 
-```php
-[cap] => stdClass Object
-(
-	// Meta capabilities
+If you assign a `'capability_type'` and then take a look into the `$GLOBALS['wp_post_types']['your_cpt_name']` array, then you'll see the following:
 
-	[edit_post]		 => "edit_{$capability_type}"
-	[read_post]		 => "read_{$capability_type}"
-	[delete_post]		 => "delete_{$capability_type}"
+    [cap] => stdClass Object
+    (
+        // Meta capabilities
 
-	// Primitive capabilities used outside of map_meta_cap():
+        [edit_post]      => "edit_{$capability_type}"
+        [read_post]      => "read_{$capability_type}"
+        [delete_post]        => "delete_{$capability_type}"
 
-	[edit_posts]		 => "edit_{$capability_type}s"
-	[edit_others_posts]	 => "edit_others_{$capability_type}s"
-	[publish_posts]		 => "publish_{$capability_type}s"
-	[read_private_posts]	 => "read_private_{$capability_type}s"
+        // Primitive capabilities used outside of map_meta_cap():
 
-	// Primitive capabilities used within map_meta_cap():
+        [edit_posts]         => "edit_{$capability_type}s"
+        [edit_others_posts]  => "edit_others_{$capability_type}s"
+        [publish_posts]      => "publish_{$capability_type}s"
+        [read_private_posts]     => "read_private_{$capability_type}s"
 
-	[read]                   => "read",
-	[delete_posts]           => "delete_{$capability_type}s"
-	[delete_private_posts]   => "delete_private_{$capability_type}s"
-	[delete_published_posts] => "delete_published_{$capability_type}s"
-	[delete_others_posts]    => "delete_others_{$capability_type}s"
-	[edit_private_posts]     => "edit_private_{$capability_type}s"
-	[edit_published_posts]   => "edit_published_{$capability_type}s"
-	[create_posts]           => "edit_{$capability_type}s"
-)
-```
-*Note the "s" at the end of plural capabilities.*
+        // Primitive capabilities used within map_meta_cap():
 
-**map\_meta\_cap**
-(boolean) (optional) Whether to use the internal default meta capability handling.
-Default: null
+        [read]                   => "read",
+        [delete_posts]           => "delete_{$capability_type}s"
+        [delete_private_posts]   => "delete_private_{$capability_type}s"
+        [delete_published_posts] => "delete_published_{$capability_type}s"
+        [delete_others_posts]    => "delete_others_{$capability_type}s"
+        [edit_private_posts]     => "edit_private_{$capability_type}s"
+        [edit_published_posts]   => "edit_published_{$capability_type}s"
+        [create_posts]           => "edit_{$capability_type}s"
+    )
 
-**Note:** If set it to false then standard admin role can't edit the posts types. Then the edit_post capability must be added to all roles to add or edit the posts types.
+_Note the "s" at the end of plural capabilities._
 
-**hierarchical**
-(boolean) (optional) Whether the post type is hierarchical (e.g. page). Allows Parent to be specified. The 'supports' parameter should contain 'page-attributes' to show the parent select box on the editor page.
+`hierarchical`
+
+([_boolean_][11]) (_optional_) Whether the post type is hierarchical (e.g. page). Allows Parent to be specified. The 'supports' parameter should contain 'page-attributes' to show the parent select box on the editor page.
+
+
 Default: false
 
-**Note:** this parameter was intended for Pages. Be careful when choosing it for your custom post type - if you are planning to have very many entries (say - over 2-3 thousand), you will run into load time issues. With this parameter set to true WordPress will fetch all IDs of that particular post type on each administration page load for your post type. Servers with limited memory resources may also be challenged by this parameter being set to true.
+
+**Note:** this parameter was intended for [Pages][13]. Be careful when choosing it for your custom post type - if you are planning to have very many entries (say - over 2-3 thousand), you will run into load time issues. With this parameter set to _true_ WordPress will fetch all IDs of that particular post type on each administration page load for your post type. Servers with limited memory resources may also be challenged by this parameter being set to _true_.
+
+`supports`
+
+([_array/boolean_][14]) (_optional_) An alias for calling [add_post_type_support()][15] directly. As of [3.5][16], boolean **false** can be passed as value instead of an array to prevent default (title and editor) behavior.
+
+
+Default: title and editor
+
+* 'title'
+* 'editor' (content)
+* 'author'
+* 'thumbnail' (featured image, current theme must also support [post-thumbnails][17])
+* 'excerpt'
+* 'trackbacks'
+* 'custom-fields'
+* 'comments' (also will see comment count balloon on edit screen)
+* 'revisions' (will store revisions)
+* 'page-attributes' (menu order, hierarchical must be true to show Parent option)
+* 'post-formats' add post formats, see [Post Formats][18]
+
+
+**Note:** When you use custom post type that use thumbnails remember to check that the theme also supports thumbnails or use [add_theme_support][19] function.
+
+`taxonomies`
+
+([_array_][9]) (_optional_) An array of registered taxonomies like `category` or `post_tag` that will be used with this post type. This can be used in lieu of calling [register_taxonomy_for_object_type()][20] directly. Custom taxonomies still need to be registered with [register_taxonomy()][6].
+
+
+Default: no taxonomies
+
+`has_archive`
+
+(_[boolean or string_][21]) (_optional_) Enables post type archives. Will use `$post_type` as archive slug by default.
+
+
+Default: false
+
+
+Note: Will generate the proper rewrite rules if `rewrite` is enabled. Also use `rewrite` to change the slug used.
+
+`rewrite`
+
+(_[boolean or array_][22]) (_optional_) Triggers the handling of rewrites for this post type. To prevent rewrites, set to false.
+
+
+Default: true and use $post_type as slug
+
+
+$args array
+
+* `'slug' => string` Customize the permalink structure slug. Defaults to the `$post_type` value. Should be translatable.
+* `'with_front' => bool` Should the permalink structure be prepended with the front base. (example: if your permalink structure is /blog/, then your links will be: false->/news/, true->/blog/news/). Defaults to true
+* `'feeds' => bool` Should a feed permalink structure be built for this post type. Defaults to `has_archive` value.
+* `'pages' => bool` Should the permalink structure provide for pagination. Defaults to true
+* `'ep_mask' => const` _As of 3.4_ Assign an endpoint mask for this post type. For more info see [Rewrite API/add_rewrite_endpoint][23], [Trac Ticket 19275][24], and [this Make WordPress Plugins summary of endpoints][25].
+    * If not specified and `permalink_epmask` is set, inherits from `permalink_epmask`
+    * If not specified and `permalink_epmask` is not set, defaults to `EP_PERMALINK`
+
+
+**Note:** If registering a post type inside of a plugin, call [flush_rewrite_rules()][26] in your activation and deactivation hook (see Flushing Rewrite on Activation below). If flush_rewrite_rules() is not used, then you will have to manually go to Settings > Permalinks and refresh your permalink structure before your custom post type will show the correct structure.
+
+`query_var`
+
+(_[boolean or string_][21]) (_optional_) Sets the `query_var` key for this post type.
+
+
+Default: true - set to $post_type
+* 'false' - Disables `query_var` key use. A post type cannot be loaded at /?{query_var}={single_post_slug}
+* 'string' - /?{query_var_string}={single_post_slug} will work as intended.
+
+
+**Note:** The query_var parameter has no effect if the 'publicly_queryable' parameter is set to false. query_var adds the custom post type's query var to the built-in query_vars array so that WordPress will recognize it. WordPress removes any query var not included in that array.
+
+
+If set to true it allows you to request a custom posts type (book) using this: example.com/?book=life-of-pi  
+
+
+If set to a string rather than true (for example 'publication'), you can do: example.com/?publication=life-of-pi
+
+`can_export`
+
+(_[boolean_][11]) (_optional_) Can this post_type be exported.
+
+
+Default: true
+
+`show_in_rest`
+
+(_[boolean_][11]) (_optional_) Whether to expose this post type in the REST API.
+
+
+Default: false
+
+`rest_base`
+
+(_[string_][8]) (_optional_) The base slug that this post type will use when accessed using the REST API.
+
+
+Default: $post_type
+
+`rest_controller_class`
+
+(_[string_][8]) (_optional_) An optional custom controller to use instead of WP_REST_Posts_Controller. Must be a subclass of WP_REST_Controller.
+
+
+Default: WP_REST_Posts_Controller
+
+`_builtin`
+
+(_[boolean_][11]) (_not for general use_) Whether this post type is a native or "built-in" post_type. **Note: this Codex entry is for documentation - core developers recommend you don't use this when registering your own post type**
+
+
+Default: false
+
+* 'false' - default this is a custom post type
+* 'true' - this is a built-in native post type (post, page, attachment, revision, nav_menu_item)
+
+`_edit_link`
+
+(_[boolean_][11]) (_not for general use_) Link to edit an entry with this post type. **Note: this Codex entry is for documentation - core developers recommend you don't use this when registering your own post type**
+
+
+Default: 'post.php?post=%d'
 
 [Link to native documentation](https://codex.wordpress.org/Function_Reference/register_post_type)
