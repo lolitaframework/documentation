@@ -255,7 +255,7 @@ If you assign a 'capability_type' and then take a look into the $GLOBALS['wp_pos
 ```
 *Note the "s" at the end of plural capabilities.*
 
-**map_meta_cap**
+**map\_meta\_cap**
 (boolean) (optional) Whether to use the internal default meta capability handling.
 Default: null
 
