@@ -14,19 +14,13 @@ You can revrite this path by __lf\_config\_menus\_path__ filter.
 Add image size
 ---
 Array key: 
-**$new_menu_location_name**
+`new_menu_location_slug` (string) (required) menu location slug.
 
 Arguments
 ---
 
-**$width**
-(int) (Required) Image width in pixels.
+`description`
+(string) (Required) menu location description.
     
-**$height**
-(int) (Required) Image height in pixels.
-    
-**$crop**
-(bool|array) (Optional) Whether to crop images to specified width and height or resize. An array can specify positioning of the crop area.
-Default value: false
-
-**$in\_drop\_down** (Optional) Add image size to WordPress system image sizes dropdown.
+## Based on
+* [register nav menus](https://codex.wordpress.org/Function_Reference/register_nav_menus)
