@@ -1,0 +1,48 @@
+Taxonomies
+===
+
+The `Taxonomies` config module helps you to register and manipulate WordPress txonomies.
+
+How it works: ![Actions](images/taxonomies.gif)
+
+Default config path
+---
+`{{ Project Name }}/app/config/taxonomies.json`
+
+You can revrite this path by __lf\_config\_taxonomies\_path__ filter.
+
+
+Arguments
+---
+`singular`
+(string) (Required)  Name for one object of this taxonomies. From this will be generated `plural` and `slug` argument if you don't specify.
+
+`plural`
+(string) (Optional) Name for few object of this taxonomy.
+
+`slug`
+(string) (optional) The name of the taxonomy. Name should only contain lowercase letters and the underscore character, and not be more than 32 characters long (database structure restriction).
+Default: None
+
+`object_type`
+(array/string) (required) Name of the object type for the taxonomy object. Object-types can be built-in Post Type or any Custom Post Type that may be registered.
+Default: None
+Built-in Post Types:
+
+* post
+* page
+* attachment
+* revision
+* nav_menu_item
+
+Custom Post Types:
+
+* {custom_post_type} - Custom Post Type names must be all in lower-case and without any spaces.
+* null - Setting explicitly to null registers the taxonomy but doesn't associate it with any objects, so it won't be directly available within the Admin UI. You will need to manually register it using the 'taxonomy' parameter (passed through $args) when registering a custom post_type (see register_post_type()), or using register_taxonomy_for_object_type().
+
+`args`
+(array/string) (optional) An array of [Arguments](https://codex.wordpress.org/Function_Reference/register_taxonomy#Arguments).
+Default: None
+
+## Based on
+[register taxonomy](https://codex.wordpress.org/Function_Reference/register_taxonomy)
