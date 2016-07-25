@@ -21,34 +21,34 @@ You can revrite this path by __lf\_config\_metaboxes\_path__ filter.
 Add Metabox
 ---
 Array key: 
-**$meta\_box\_id**
+`meta\_box\_id` (string) (Required) Meta box ID (used in the 'id' attribute for the meta box).
 
 Arguments
 ---
-**$title**
+`title`
 (string) (Required) Title of the meta box.
 
-**$callback**
+`callback`
 (callable) (Required) Function that fills the box with the desired content. The function should echo its output.
 
-**$screen**
+`screen`
 (string|array|WP_Screen) (Optional) The screen or screens on which to show the box (such as a post type, 'link', or 'comment'). Accepts a single screen ID, WP_Screen object, or array of screen IDs. Default is the current screen.
 Default value: null
 
-**$context**
+`context`
 (string) (Optional) The context within the screen where the boxes should display. Available contexts vary from screen to screen. Post edit screen contexts include 'normal', 'side', and 'advanced'. Comments screen contexts include 'normal' and 'side'. Menus meta boxes (accordion sections) all use the 'side' context. Global
 Default value: 'advanced'
 
-**$priority**
+`priority`
 (string) (Optional) The priority within the context where the boxes should show ('high', 'low').
 Default value: 'default'
 
-**$callback_args**
+`callback_args`
 (array) (Optional) Data that should be set as the $args property of the box array (which is the second parameter passed to your callback).
 Default value: null
 
-**$controls** (array) (Optional) Lolita Framework controls list.
+`controls` (array) (Optional) Lolita Framework controls list.
 
 
-
-[Link to native documentation](https://developer.wordpress.org/reference/functions/add_meta_box/)
+## Based on
+* [add meta box](https://developer.wordpress.org/reference/functions/add_meta_box/)
