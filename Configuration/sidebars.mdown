@@ -27,13 +27,24 @@ Arguments
 ````
 ) Note: uses sprintf for variable substitution
 
-`after_widget` - HTML to place after every widget (default: ```HTML</li>\n```).
+`after_widget` - HTML to place after every widget (default: 
+```HTML
+</li>\n
+```
+).
 
-`before_title` - HTML to place before every title (default: ```HTML
+`before_title` - HTML to place before every title (default: 
+```HTML
+
 <h2 class="widgettitle">
-```).
+```
+).
 
-`after_title` - HTML to place after every title (default: ```</h2>\n```).
+`after_title` - HTML to place after every title (default: 
+```HTML
+</h2>\n
+```
+).
 Default: None
 
 ## Based on
