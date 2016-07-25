@@ -12,12 +12,12 @@ Default config path
 You can revrite this path by __lf\_config\_posttypes\_path__ filter.
 
 
-Parameters
+Arguments
 ---
-**$singular**
+`singular`
 (string) (Required)  Name for one object of this post type. From this will be generated plural and slug.
 
-**$plural**
+`plural`
 (string) (Optional) Name for few object of this post type.
 
 `label`
@@ -378,9 +378,10 @@ Default: false
 
 `_edit_link`
 
-(_[boolean_][11]) (_not for general use_) Link to edit an entry with this post type. **Note: this Codex entry is for documentation - core developers recommend you don't use this when registering your own post type**
+(_[boolean]_[11]) (_not for general use_) Link to edit an entry with this post type. **Note: this Codex entry is for documentation - core developers recommend you don't use this when registering your own post type**
 
 
-Default:
+Default: 'post.php?post=%d'
 
-[Link to native documentation](https://codex.wordpress.org/Function_Reference/register_post_type)
+## Based on
+[register post type](https://codex.wordpress.org/Function_Reference/register_post_type)
