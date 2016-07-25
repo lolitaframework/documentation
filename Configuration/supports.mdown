@@ -1,0 +1,21 @@
+Supports
+===
+
+The `Supports` allows a theme to register its support of a certain feature. 
+
+Default config path
+---
+`{{ Project Name }}/app/config/supports.json`
+
+You can revrite this path by __lf\_config\_supports\_path__ filter.
+
+Arguments
+---
+`feature`
+(string) (Required) The feature being added.
+
+`args` (array) (Optional) arguments.
+
+Based on
+---
+* [add theme support](https://developer.wordpress.org/reference/functions/add_theme_support/)
