@@ -13,23 +13,18 @@ You can revrite this path by __lf\_config\_actions\_path__ filter.
 
 Arguments
 ---
-__$tag__
+`tag`
 (string) (Required) The name of the action to which the $function_to_add is hooked.
 
-__$function\_to\_add__
+`function_to_add`
 (callable) (Required) The name of the function you wish to be called.
 
-__$priority__
+`priority`
 (int) (Optional) Used to specify the order in which the functions associated with a particular action are executed. Lower numbers correspond with earlier execution, and functions with the same priority are executed in the order in which they were added to the action.
 Default value: 10
 
-**$accepted\_args**
+`accepted_args`
 (int) (Optional) The number of arguments the function accepts.
 Default value: 1
-
-Return
----
-
-(true) Will always return true.
 
 [Link to native documentation](https://developer.wordpress.org/reference/functions/add_action/)

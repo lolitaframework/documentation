@@ -12,15 +12,17 @@ Default config path
 You can revrite this path by __lf\_config\_posttypes\_path__ filter.
 
 
-Arguments
+Parameters
 ---
-`singular`
+**$singular**
 (string) (Required)  Name for one object of this post type. From this will be generated plural and slug.
 
-`plural`
+**$plural**
 (string) (Optional) Name for few object of this post type.
 
-`label` ([_string_][8]) (_optional_) A **plural** descriptive name for the post type marked for translation.
+`label`
+
+([_string_][8]) (_optional_) A **plural** descriptive name for the post type marked for translation.
 
 
 Default: Value of $labels['name']
@@ -137,7 +139,7 @@ Default: "post"
 
 
 **Example** with "book" or "array( 'book', 'books' )" value, it's generate the 7 capabilities equal to set capabilities parameter to this :
-```php
+
     'capabilities' => array(
       'edit_post'          => 'edit_book',
       'read_post'          => 'read_book',
@@ -148,7 +150,7 @@ Default: "post"
       'read_private_posts' => 'read_private_books',
       'create_posts'       => 'edit_books',
     ),
-```
+
 
 **Note 1:** The "create_posts" capability correspond to "edit_books" so it become equal to "edit_posts".
 
@@ -157,7 +159,7 @@ Default: "post"
 
 
 You can take a look into the `$GLOBALS['wp_post_types']['your_cpt_name']` array, then you'll see the following:
-```php
+
     [cap] => stdClass Object
         (
             // Meta capabilities
@@ -174,7 +176,7 @@ You can take a look into the `$GLOBALS['wp_post_types']['your_cpt_name']` array,
             // Primitive capabilities used within map_meta_cap():
             [create_posts] => edit_books
         )
-```
+
 
 Some of the capability types that can be used (probably not exhaustive list):
 
@@ -218,7 +220,7 @@ There are also eight other **primitive capabilities** which are not referenced d
 **Note 2:** In fact, when some user have a role with just the post type capabilies it isn't enough for create new object... It's because meta capabilities for custom post types were not being automatically mapped, so we couldn't have granular control over permissions. To map meta capabilities for custom post types we can use map_meta_cap hook as it's explain here : .
 
 If you assign a `'capability_type'` and then take a look into the `$GLOBALS['wp_post_types']['your_cpt_name']` array, then you'll see the following:
-```php
+
     [cap] => stdClass Object
     (
         // Meta capabilities
@@ -245,7 +247,7 @@ If you assign a `'capability_type'` and then take a look into the `$GLOBALS['wp_
         [edit_published_posts]   => "edit_published_{$capability_type}s"
         [create_posts]           => "edit_{$capability_type}s"
     )
-```
+
 _Note the "s" at the end of plural capabilities._
 
 `hierarchical`
@@ -379,6 +381,6 @@ Default: false
 (_[boolean_][11]) (_not for general use_) Link to edit an entry with this post type. **Note: this Codex entry is for documentation - core developers recommend you don't use this when registering your own post type**
 
 
-Default: 'post.php?post=%d'
+Default:
 
 [Link to native documentation](https://codex.wordpress.org/Function_Reference/register_post_type)
