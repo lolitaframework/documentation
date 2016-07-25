@@ -32,4 +32,5 @@ Return
 
 (true) Will always return true.
 
-[Link to native documentation](https://developer.wordpress.org/reference/functions/add_action/)
+## Based on
+* [add_action()](https://developer.wordpress.org/reference/functions/add_action/)
