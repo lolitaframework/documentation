@@ -14,19 +14,25 @@ You can revrite this path by __lf\_config\_images\_path__ filter.
 Add image size
 ---
 Array key: 
-**$new\_image\_size\_name**
+`new_image_size_name`
 
 Arguments
 ---
 
-**$width**
+`width`
 (int) (Required) Image width in pixels.
 	
-**$height**
+`height`
 (int) (Required) Image height in pixels.
 	
-**$crop**
+`crop`
 (bool|array) (Optional) Whether to crop images to specified width and height or resize. An array can specify positioning of the crop area.
 Default value: false
 
-**$in\_drop\_down** (Optional) Add image size to WordPress system image sizes dropdown.
+`in_drop_down` (Optional) Add image size to WordPress system image sizes dropdown.
+
+Based on
+---
+* [Plugin API/Filter Reference/image size names choose](https://codex.wordpress.org/Plugin_API/Filter_Reference/image_size_names_choose)
+
+* [add_image_size()](https://developer.wordpress.org/reference/functions/add_image_size/)
