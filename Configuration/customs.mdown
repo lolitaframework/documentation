@@ -9,4 +9,8 @@ Default config path
 
 You can revrite this path by __lf\_config\_customs\_path__ filter.
 
+## Arguments
+
+`path` (string) path to load folder with custom classes. 
+
 How it works: ![Deregister Scripts](images/customs.gif)

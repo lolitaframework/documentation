@@ -55,28 +55,6 @@ wp_enqueue_script(
 ?>
 ```
 
-## Arguments
-
-`handle`
-(string) (Required) Name of the script. Should be unique.
-
-`src`
-(string) (Optional) Full URL of the script, or path of the script relative to the WordPress root directory.
-Default value: false
-
-`deps`
-(array) (Optional) An array of registered script handles this script depends on.
-Default value: array()
-
-`ver`
-(string|bool|null) (Optional) String specifying script version number, if it has one, which is added to the URL as a query string for cache busting purposes. If version is set to false, a version number is automatically added equal to current installed WordPress version. If set to null, no version is added.
-Default value: false
-
-`in_footer`
-(bool) (Optional) Whether to enqueue the script before </body> instead of in the <head>. Default 'false'.
-Default value: false
-
-
 How it works: ![Deregister Scripts](images/scripts.gif)
 
 Loading styles
@@ -102,27 +80,6 @@ wp_enqueue_style(
 ?>
 ```
 
-## Arguments
-`handle`
-(string) (Required) Name of the stylesheet. Should be unique.
-
-`src`
-(string) (Optional) Full URL of the stylesheet, or path of the stylesheet relative to the WordPress root directory.
-Default value: false
-
-`deps`
-(array) (Optional) An array of registered stylesheet handles this stylesheet depends on.
-Default value: array()
-
-`ver`
-(string|bool|null) (Optional) String specifying stylesheet version number, if it has one, which is added to the URL as a query string for cache busting purposes. If version is set to false, a version number is automatically added equal to current installed WordPress version. If set to null, no version is added.
-Default value: false
-
-`media`
-(string) (Optional) The media for which this stylesheet has been defined. Accepts media types like 'all', 'print' and 'screen', or media queries like '(orientation: portrait)' and '(max-width: 640px)'.
-Default value: 'all'
-
-
 How it works: ![Deregister Scripts](images/styles.gif)
 
 Localize script
@@ -139,20 +96,6 @@ Based on: [wp localize script](https://codex.wordpress.org/Function_Reference/wp
 ```php
 <?php wp_localize_script( $handle, $name, $data ) ?>
 ```
-
-## Arguments
-
-`handle`
-(string) (required) The registered script handle you are attaching the data for.
-Default: None
-
-`name`
-(string) (required) The name of the variable which will contain the data. Note that this should be unique to both the script and to the plugin or theme. Thus, the value here should be properly prefixed with the slug or another unique value, to prevent conflicts. However, as this is a JavaScript object name, it cannot contain dashes. Use underscores or camelCasing.
-Default: None
-
-`data`
-(array) (required) The data itself. The data can be either a single- or multi- (as of 3.3) dimensional array. Like json_encode(), the data will be a JavaScript object if the array is an associate array (a map), otherwise the array will be a JavaScript array.
-Default: None
 
 How it works: ![Deregister Scripts](images/localize.gif)
 
@@ -190,9 +133,5 @@ wp_enqueue_style(
 );
 ?>
 ```
-
-## Arguments
-
-`callback` (callable) (Required) The name of the function you wish to be called.
 
 How it works: ![Deregister Scripts](images/custom.gif)
