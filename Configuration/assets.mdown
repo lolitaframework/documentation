@@ -19,7 +19,7 @@ __admin\_deregister\_scripts__ --- deregistering scripts from back end.
 
 __login\_deregister\_scripts__ --- deregistering scripts from login page.
 
-Based on: [wp deregister script](https://codex.wordpress.org/Function_Reference/wp_deregister_script)
+
 ```php
 <?php wp_deregister_script( $handle ); ?>
 ```
@@ -30,6 +30,9 @@ Based on: [wp deregister script](https://codex.wordpress.org/Function_Reference/
 Default: None
 
 How it works: ![Deregister Scripts](images/deregister_scripts.gif)
+
+## Based on
+* [wp deregister script](https://codex.wordpress.org/Function_Reference/wp_deregister_script)
 
 
 Loading scripts
@@ -42,7 +45,6 @@ __admin\_scripts__ --- load scripts into back end.
 
 __login\_scripts__ --- load scripts into login page.
 
-Based on: [wp enqueue script](https://codex.wordpress.org/Function_Reference/wp_enqueue_script)
 ```php
 <?php
 wp_enqueue_script(
@@ -57,6 +59,9 @@ wp_enqueue_script(
 
 How it works: ![Deregister Scripts](images/scripts.gif)
 
+## Based on
+* [wp enqueue script](https://codex.wordpress.org/Function_Reference/wp_enqueue_script)
+
 Loading styles
 ---
 Array keys:
@@ -67,7 +72,6 @@ __admin\_styles__ --- load styles into back end.
 
 __login\_styles__ --- load styles into login page.
 
-Based on: [wp enqueue style](https://codex.wordpress.org/Function_Reference/wp_enqueue_style)
 ```php
 <?php
 wp_enqueue_style(
@@ -82,6 +86,9 @@ wp_enqueue_style(
 
 How it works: ![Deregister Scripts](images/styles.gif)
 
+## Based on
+* [wp enqueue style](https://codex.wordpress.org/Function_Reference/wp_enqueue_style)
+
 Localize script
 ---
 Array keys:
@@ -92,12 +99,14 @@ __admin\_localize__ --- load localize script into back end.
 
 __login\_localize__ --- load localize script into login page.
 
-Based on: [wp localize script](https://codex.wordpress.org/Function_Reference/wp_localize_script)
 ```php
 <?php wp_localize_script( $handle, $name, $data ) ?>
 ```
 
 How it works: ![Deregister Scripts](images/localize.gif)
+
+## Based on
+* [wp localize script](https://codex.wordpress.org/Function_Reference/wp_localize_script)
 
 Custom loading styles, scripts with some conditions
 ---
@@ -109,7 +118,6 @@ __admin\_custom__ --- load custom into back end.
 
 __login\_custom__ --- load custom into login page.
 
-Based on: [wp enqueue style](https://codex.wordpress.org/Function_Reference/wp_enqueue_style) And [wp enqueue script](https://codex.wordpress.org/Function_Reference/wp_enqueue_script)
 ```php
 <?php
 wp_enqueue_script(
@@ -135,3 +143,7 @@ wp_enqueue_style(
 ```
 
 How it works: ![Deregister Scripts](images/custom.gif)
+
+## Based on
+* [wp enqueue style](https://codex.wordpress.org/Function_Reference/wp_enqueue_style)
+* [wp enqueue script](https://codex.wordpress.org/Function_Reference/wp_enqueue_script)
