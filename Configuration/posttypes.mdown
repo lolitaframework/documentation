@@ -159,4 +159,112 @@ Default: "post"
 ),
 ```
 
+**Note 1:** The "create_posts" capability correspond to "edit_books" so it become equal to "edit_posts".
+
+**Note 2:** See capabilities note 2 about meta capabilities mapping for custom post type.
+
+You can take a look into the $GLOBALS['wp_post_types']['your_cpt_name'] array, then you'll see the following:
+
+```php
+[cap] => stdClass Object
+	(
+		// Meta capabilities
+		[edit_post] => edit_book
+		[read_post] => read_book
+		[delete_post] => delete_book
+
+		// Primitive capabilities used outside of map_meta_cap():
+		[edit_posts] => edit_books
+		[edit_others_posts] => edit_others_books
+		[publish_posts] => publish_books
+		[read_private_posts] => read_private_books
+
+		// Primitive capabilities used within map_meta_cap():
+		[create_posts] => edit_books
+	)
+```
+
+Some of the capability types that can be used (probably not exhaustive list):
+
+* post (default)
+* page
+
+These built-in types cannot be used:
+
+* attachment
+* mediapage
+
+**Note 3:** If you use capabilities parameter, capability_type complete your capabilities.
+
+**capabilities**
+(array) (optional) An array of the capabilities for this post type.
+Default: capability_type is used to construct
+
+By default, seven keys are accepted as part of the capabilities array:
+
+* edit\_post, read_post, and delete_post - These three are meta capabilities, which are then generally mapped to corresponding primitive capabilities depending on the context, for example the post being edited/read/deleted and the user or role being checked. Thus these capabilities would generally not be granted directly to users or roles.
+* edit\_posts - Controls whether objects of this post type can be edited.
+* edit\_others\_posts - Controls whether objects of this type owned by other users can be edited. If the post type does not support an author, then this will behave like edit_posts.
+* publish\_posts - Controls publishing objects of this post type.
+* read\_private\_posts - Controls whether private objects can be read.
+
+**Note 1:** those last four primitive capabilities are checked in core in various locations.
+
+There are also eight other primitive capabilities which are not referenced directly in core, except in map_meta_cap(), which takes the three aforementioned meta capabilities and translates them into one or more primitive capabilities that must then be checked against the user or role, depending on the context. These additional capabilities are only used in map_meta_cap(). Thus, they are only assigned by default if the post type is registered with the 'map_meta_cap' argument set to true (default is false).
+
+* read - Controls whether objects of this post type can be read.
+* delete\_posts - Controls whether objects of this post type can be deleted.
+* delete\_private\_posts - Controls whether private objects can be deleted.
+* delete\_published\_posts - Controls whether published objects can be deleted.
+* delete\_others\_posts - Controls whether objects owned by other users can be can be deleted. If the post type does not support an author, then this will behave like delete_posts.
+* edit\_private\_posts - Controls whether private objects can be edited.
+* edit\_published\_posts - Controls whether published objects can be edited.
+* create\_posts - Controls whether new objects can be created
+
+**Note 2:** In fact, when some user have a role with just the post type capabilies it isn't enough for create new object... It's because meta capabilities for custom post types were not being automatically mapped, so we couldn’t have granular control over permissions. To map meta capabilities for custom post types we can use map_meta_cap hook as it's explain here : http://justintadlock.com/archives/2010/07/10/meta-capabilities-for-custom-post-types.
+
+If you assign a 'capability_type' and then take a look into the $GLOBALS['wp_post_types']['your_cpt_name'] array, then you'll see the following:
+
+```php
+[cap] => stdClass Object
+(
+	// Meta capabilities
+
+	[edit_post]		 => "edit_{$capability_type}"
+	[read_post]		 => "read_{$capability_type}"
+	[delete_post]		 => "delete_{$capability_type}"
+
+	// Primitive capabilities used outside of map_meta_cap():
+
+	[edit_posts]		 => "edit_{$capability_type}s"
+	[edit_others_posts]	 => "edit_others_{$capability_type}s"
+	[publish_posts]		 => "publish_{$capability_type}s"
+	[read_private_posts]	 => "read_private_{$capability_type}s"
+
+	// Primitive capabilities used within map_meta_cap():
+
+	[read]                   => "read",
+	[delete_posts]           => "delete_{$capability_type}s"
+	[delete_private_posts]   => "delete_private_{$capability_type}s"
+	[delete_published_posts] => "delete_published_{$capability_type}s"
+	[delete_others_posts]    => "delete_others_{$capability_type}s"
+	[edit_private_posts]     => "edit_private_{$capability_type}s"
+	[edit_published_posts]   => "edit_published_{$capability_type}s"
+	[create_posts]           => "edit_{$capability_type}s"
+)
+```
+*Note the "s" at the end of plural capabilities.*
+
+**map_meta_cap**
+(boolean) (optional) Whether to use the internal default meta capability handling.
+Default: null
+
+**Note:** If set it to false then standard admin role can't edit the posts types. Then the edit_post capability must be added to all roles to add or edit the posts types.
+
+**hierarchical**
+(boolean) (optional) Whether the post type is hierarchical (e.g. page). Allows Parent to be specified. The 'supports' parameter should contain 'page-attributes' to show the parent select box on the editor page.
+Default: false
+
+**Note:** this parameter was intended for Pages. Be careful when choosing it for your custom post type - if you are planning to have very many entries (say - over 2-3 thousand), you will run into load time issues. With this parameter set to true WordPress will fetch all IDs of that particular post type on each administration page load for your post type. Servers with limited memory resources may also be challenged by this parameter being set to true.
+
 [Link to native documentation](https://codex.wordpress.org/Function_Reference/register_post_type)
