@@ -15,14 +15,14 @@ Add short code
 ---
 Array key:
 
-**$short\_code\_tag**
+`short_code_tag` (string) (required) Shortcode tag to be searched in post content
 
 Arguments
 ---
-**$func**
+`func`
 (callable) (required) Hook to run when shortcode is found
 
 Default: None
 
-
-[Link to native documentation](https://codex.wordpress.org/ru:Shortcode_API)
+## Based on
+[Shortcode API](https://codex.wordpress.org/ru:Shortcode_API)
