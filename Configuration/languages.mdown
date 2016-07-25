@@ -12,10 +12,15 @@ You can revrite this path by __lf\_config\_languages\_path__ filter.
 Add image size
 ---
 Array key: 
-**$domain_name**
+
+`domain_name` (string) (required) Unique identifier for retrieving translated strings.
+Default: None
 
 Arguments
 ---
 
-**$path**
+`path`
 (string) (Required) Path to language folder [available to load from model]. 
+
+## Based on
+* [load\_theme\_textdomain](https://codex.wordpress.org/Function_Reference/load_theme_textdomain)
