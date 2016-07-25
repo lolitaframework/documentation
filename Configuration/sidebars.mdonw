@@ -1,0 +1,40 @@
+Sidebars
+===
+
+The `Sidebars` config module is responsible to easily register new sidebar.
+
+How it works: ![Actions](images/sidebars.gif)
+
+Default config path
+---
+`{{ Project Name }}/app/config/sidebars.json`
+
+You can revrite this path by __lf\_config\_sidebars\_path__ filter.
+
+Arguments
+---
+`name` - Sidebar name (default is localized 'Sidebar' and numeric ID).
+
+`id` - Sidebar id - Must be all in lowercase, with no spaces (default is a numeric auto-incremented ID). If you do not set the id argument value, you will get E_USER_NOTICE messages in debug mode, starting with version 4.2.
+
+`description` - Text description of what/where the sidebar is. Shown on widget management screen. (Since 2.9) (default: empty)
+
+`class` - CSS class to assign to the Sidebar in the Appearance -> Widget admin page. This class will only appear in the source of the WordPress Widget admin page. It will not be included in the frontend of your website. Note: The value "sidebar" will be prepended to the class value. For example, a class of "tal" will result in a class value of "sidebar-tal". (default: empty).
+
+`before_widget` - HTML to place before every widget(default: 
+```HTML
+<li id="%1$s" class="widget %2$s">
+````
+) Note: uses sprintf for variable substitution
+
+`after_widget` - HTML to place after every widget (default: ```HTML</li>\n```).
+
+`before_title` - HTML to place before every title (default: ```HTML
+<h2 class="widgettitle">
+```).
+
+`after_title` - HTML to place after every title (default: ```</h2>\n```).
+Default: None
+
+## Based on
+* [register_sidebar](https://codex.wordpress.org/Function_Reference/register_sidebar)
