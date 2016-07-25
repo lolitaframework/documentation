@@ -13,27 +13,20 @@ You can revrite this path by __lf\_config\_filters\_path__ filter.
 
 Arguments
 ---
-**$tag**
-(string) (required) The name of the filter to hook the $function_to_add to.
+`tag`
+(string) (required) The name of the filter to hook the $function\_to\_add to.
 Default: None
 
-**$function\_to\_add**
+`function_to_add`
 (callback) (required) The name of the function to be called when the filter is applied. Note: Only string-formatted syntaxes listed in the PHP documentation for the 'callback' type are valid.
 Default: None
 
-**$priority**
+`priority`
 (integer) (optional) Used to specify the order in which the functions associated with a particular action are executed. Lower numbers correspond with earlier execution, and functions with the same priority are executed in the order in which they were added to the action.
 Default: 10
 
-**$accepted_args**
+`accepted_args`
 (integer) (optional) The number of arguments the function(s) accept(s). In WordPress 1.5.1 and newer hooked functions can take extra arguments that are set when the matching do_action() or apply_filters() call is run.
 Default: 1
-
-Return
----
-
-The function returns true whether the attempted function hook fails or not. There is no test that the function exists nor whether the $function_to_add is even a string. It is up to you to take care and this is done for optimization purposes, so everything is as quick as possible.
-
-
 
 [Link to native documentation](https://codex.wordpress.org/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA_%D0%BF%D0%BE_%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F%D0%BC/add_filter)
