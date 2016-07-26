@@ -45,4 +45,4 @@ Custom Post Types:
 Default: None
 
 ## Based on
-[register taxonomy](https://codex.wordpress.org/Function_Reference/register_taxonomy)
+* [register taxonomy](https://codex.wordpress.org/Function_Reference/register_taxonomy)
