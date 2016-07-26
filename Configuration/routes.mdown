@@ -11,12 +11,21 @@ Default config path
 
 You can rewrite this path by __lf\_config\_routes\_path__ filter.
 
+Add route type
+---
+`route_type` (string) it can be native WordPress conditional tag, page template, taxonomy, page.
+
 Arguments
 ---
-`feature`
-(string) (Required) The feature being added.
+`interpret_data` (string | callable) route content. Example: {{ CONSTANT }}, {{ Class::method }}, ["Class", "method"], functionName.
 
-`args` (array) (Optional) arguments.
+### OR
+
+`html`  (string | callable) (required) route content. Example: {{ CONSTANT }}, {{ Class::method }}, ["Class", "method"], functionName.
+
+`class` (string) (optional) css class will be added to body_class function return value.
+
+`template_name` (string) (opitonal) if you set this, route will be added to page templates dropdown in wordpress backend.
 
 Based on
 ---
