@@ -7,7 +7,7 @@ Default config path
 ---
 `{{ Project Name }}/app/config/supports.json`
 
-You can revrite this path by __lf\_config\_supports\_path__ filter.
+You can rewrite this path by __lf\_config\_supports\_path__ filter.
 
 Arguments
 ---

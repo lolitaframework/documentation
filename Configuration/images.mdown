@@ -9,7 +9,7 @@ Default config path
 ---
 `{{ Project Name }}/app/config/images.json`
 
-You can revrite this path by __lf\_config\_images\_path__ filter.
+You can rewrite this path by __lf\_config\_images\_path__ filter.
 
 Add image size
 ---

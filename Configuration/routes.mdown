@@ -1,0 +1,23 @@
+Routes
+===
+
+The route system is an enhanced "if" statement. It is based on the [WordPress template conditional tags.](https://codex.wordpress.org/Conditional_Tags)
+
+A basic route is using a conditional tag and a closure callback.
+
+Default config path
+---
+`{{ Project Name }}/app/config/routes.json`
+
+You can rewrite this path by __lf\_config\_routes\_path__ filter.
+
+Arguments
+---
+`feature`
+(string) (Required) The feature being added.
+
+`args` (array) (Optional) arguments.
+
+Based on
+---
+* [WordPress template conditional tags.](https://codex.wordpress.org/Conditional_Tags)
