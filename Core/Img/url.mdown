@@ -1,0 +1,21 @@
+\MyProject\LolitaFramework\Core\Img::url
+===
+
+Get image URL.
+
+Example usage
+---
+```php
+$src = Img::url();
+// htt://somesite.com/someimage.jpg
+
+```
+Parameters
+---
+**$attachment_id** (int) (optional) attachment id. Default: 0.
+
+**$size** (string) (optional) image size. Default: thumbnail.
+
+Return Value
+---
+**string** 
