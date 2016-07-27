@@ -10,6 +10,8 @@ How it works
 ### Basic usage
 Set a route for the WordPress Home page.
 
+**Simple text.**
+
 ```php
 
 {
@@ -19,6 +21,8 @@ Set a route for the WordPress Home page.
 // Route: /
 // Home sweet home
 ```
+
+**Constant**
 
 ```php
 
@@ -31,6 +35,9 @@ define("SOME_CONSTANT", "Home sweet home");
 // Route: /
 // Home sweet home
 ```
+
+**Function**
+
 
 ```php
 
@@ -46,6 +53,8 @@ function homeSweetHome() {
 // Route: /
 // Home sweet home
 ```
+
+**Class method**
 
 ```php
 
@@ -65,6 +74,8 @@ class ModelPages
 // Home sweet home
 ```
 
+**Class method from braces**
+
 ```php
 
 class ModelPages
@@ -82,6 +93,7 @@ class ModelPages
 // Route: /
 // Home sweet home
 ```
+### Add page template to WordPress
 
 
 
