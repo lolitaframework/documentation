@@ -1,0 +1,16 @@
+\MyProject\LolitaFramework\Core\View::getDefaultFolder
+===
+
+Get default views folder
+
+Example usage
+---
+```php
+$default_path = View::getDefaultFolder();
+// /Users/lf/sites/myproject/wp-content/themes/MyProject/app/views/
+
+```
+
+Return Value
+---
+**string** path to default views folder
