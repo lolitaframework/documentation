@@ -5,6 +5,86 @@ The route system is an enhanced "if" statement. It is based on the [WordPress te
 
 A basic route is using a conditional tag and a closure callback.
 
+How it works
+---
+### Basic usage
+Set a route for the WordPress Home page.
+
+```php
+
+{
+    "home" : "Home sweet home"
+}
+
+// Route: /
+// Home sweet home
+```
+
+```php
+
+define("SOME_CONSTANT", "Home sweet home");
+
+{
+    "home" : "{{ SOME_CONSTANT }}"
+}
+
+// Route: /
+// Home sweet home
+```
+
+```php
+
+function homeSweetHome() {
+	echo 'Home sweet home';
+}
+
+
+{
+    "home" : "homeSweetHome"
+}
+
+// Route: /
+// Home sweet home
+```
+
+```php
+
+class ModelPages
+{
+	public static function home() {
+		echo 'Home sweet home';
+	}
+}
+
+
+{
+    "home" : ["\\MyProject\\ModelPages", "home"]
+}
+
+// Route: /
+// Home sweet home
+```
+
+```php
+
+class ModelPages
+{
+	public static function home() {
+		echo 'Home sweet home';
+	}
+}
+
+
+{
+    "home" : "{{ \\MyProject\\ModelPages::home }}"
+}
+
+// Route: /
+// Home sweet home
+```
+
+
+
 Default config path
 ---
 `{{ Project Name }}/app/config/routes.json`
@@ -26,6 +106,7 @@ Arguments
 `class` (string) (optional) css class will be added to body_class function return value.
 
 `template_name` (string) (opitonal) if you set this, route will be added to page templates dropdown in wordpress backend.
+
 
 Based on
 ---
