@@ -94,6 +94,43 @@ class ModelPages
 // Home sweet home
 ```
 ### Add page template to WordPress
+```php
+{
+    "page-sometemplate" : {
+    	"html" : "{{ \\MyProject\\ModelPages::home }}",
+    	"template_name" : "Some template"
+    }
+}
+
+// Route: /{page_with_template}
+// Home sweet home
+```
+
+### Page with custom route
+```php
+{
+    "custom_route" : {
+    	"html" : "{{ \\MyProject\\ModelPages::customRoute }}"
+    }
+}
+
+// Route: /custom_route
+// Here is custom route
+```
+
+
+### Add css class to body_class()
+```php
+{
+    "custom_route" : {
+    	"html" : "{{ \\MyProject\\ModelPages::customRoute }}",
+    	"class" : "red-page"
+    }
+}
+
+// Route: /custom_route
+// <body class="red-page ...">
+```
 
 
 
