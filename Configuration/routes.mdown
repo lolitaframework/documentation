@@ -5,6 +5,35 @@ The route system is an enhanced "if" statement. It is based on the [WordPress te
 
 A basic route is using a conditional tag and a closure callback.
 
+Conditional tags
+---
+
+Here is the current list of available route conditional tags in alphabetical order:
+
+* 404
+* archive
+* attachment
+* author
+* category
+* date
+* day
+* front
+* home
+* month
+* page
+* paged
+* postTypeArchive
+* search
+* single
+* singular
+* sticky
+* subpage
+* tag
+* tax
+* template
+* time
+* year
+
 How it works
 ---
 ### Basic usage
